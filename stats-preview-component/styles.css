@@ -136,10 +136,10 @@ footer {
 #attribution {
   height: 5rem;
   background-color: rgb(183, 119, 243);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .attribution--content {
