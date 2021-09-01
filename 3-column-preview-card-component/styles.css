@@ -188,9 +188,13 @@ footer {
 }
 
 @media screen and (max-width: 750px) {
+  #column-section {
+    padding: calc(3rem + 2vw);
+  }
   #column-preview {
     flex-direction: column;
     height: 100%;
+    width: 80%;
   }
 
   .column-preview--content-1,
