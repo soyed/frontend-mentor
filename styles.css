@@ -58,7 +58,7 @@ footer {
   align-items: center;
 
   width: 45rem;
-  height: 65rem;
+  height: 60rem;
   border-radius: 1.5rem;
 }
 
@@ -238,6 +238,10 @@ footer {
     background: var(--color-pale-blue)
       url('./images/pattern-background-mobile.svg') no-repeat;
     background-size: contain;
+  }
+  .order-summary {
+    width: 80%;
+    height: 70vh;
   }
 
   .order-summary {
