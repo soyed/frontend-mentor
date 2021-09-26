@@ -1,5 +1,5 @@
 #### Frontend-Mentor-newbie Challenges
-This repository contains all the mini layout and components i have built to practice Fron-end skills I have learnt
+This repository contains all the mini layout and components i have built to practice Front-end skills I have learnt
 There are currently no live links for these components but i will be setting a live link for each branch soon..
 
 To see the source code for each build simply navigate through the branches.
