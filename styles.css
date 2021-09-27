@@ -105,6 +105,7 @@ footer {
   color: var(--color-violet);
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
+  cursor: pointer;
   box-shadow: 0.5rem 0.5rem 0.8rem 0.2rem #3030306e;
   transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -145,6 +146,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
 }
