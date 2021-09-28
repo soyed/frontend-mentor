@@ -142,6 +142,7 @@ footer {
   border-radius: 0.6rem;
   background-color: var(--color-yellow-bright);
   color: white;
+  cursor: pointer;
   font-size: calc(0.75rem + 0.4vw);
   box-shadow: 0rem 0.5rem 0.7rem 0.2rem rgba(136, 136, 136, 0.103);
 }
