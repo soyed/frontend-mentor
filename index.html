@@ -13,8 +13,6 @@
     />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
       rel="stylesheet"
@@ -31,68 +29,67 @@
     <!-- CSS Style -->
     <link rel="stylesheet" href="./styles.css" />
 
+    <!-- Js File -->
+    <script defer src="./index.js"></script>
+
     <title>Frontend Mentor | Ping coming soon page</title>
 
   
     </style>
   </head>
   <body>
-    
-    <main>
-      <header id="header-section">
-        <div class="ping-section__header">PING<span>.</span></div>
-        </header>
-      <section class="ping-section">
+    <!-- Header -->
+    <header id="header-section">
+      <div class="ping-section__header">PING<span>.</span></div>
+    </header>
+    <!-- Ping Section -->
+      <section id="ping-section">
         <!-- ping-section content -->
         <div class="ping--main">
           <div class="ping-main__content">
             <h1 class="ping-content__title">We are launching <span>soon!</span></h1>
             <p class="ping-content__para">Subscribe and get notified</p>
-
             <form class="ping-main__form">
               <div class="ping--form__email">
-                <input type="email" placeholder="Your email address...">
-                <button class="ping__notify-btn">Notify Me</button>
+                <input type="email" placeholder="Your email address..." class="ping__email-input">
+                <p class="ping--email__error-msg hidden"></p>
               </div>
-                <p class="ping--email__error-msg hidden">Please provide a valid email address</p>
-              
+              <button class="ping__notify-btn">Notify Me</button>
               
             </form>
           </div>
-
           <div class="ping-main__img">
             <img src="./images/illustration-dashboard.png" alt="dashboard-img">
           </div>
         </div>
       </section>
-
-      <section id="ping-socials">
-        <!-- Ping section footer -->
-        <div class="ping-section__footer">
-          <ul class="ping-footer--icons">
-            <li class="ping-icons__icon ping-icons__icon1">
-              <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li class="ping-icons__icon ping-icons__icon2">
-              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="ping-icons__icon ping-icons__icon3">
-              <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>
-          </ul>
-          <div class="ping--footer__copyright">
-            <p class="ping--copyright__para">&copy;Copyright Ping. All rights reserved</p>
-          </div>        
-        </div>
-      </section>
-      <footer id="attribution">
-        <p class="attribution__content">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">Samuel Oyediran</a>.
-        </p>
-      </footer>
-    </main>
+      <!-- Footer Section -->
+    <section id="ping-socials">
+      <!-- Ping section footer -->
+      <div class="ping-section__footer">
+        <ul class="ping-footer--icons">
+          <li class="ping-icons__icon ping-icons__icon1">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li class="ping-icons__icon ping-icons__icon2">
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="ping-icons__icon ping-icons__icon3">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+        <div class="ping--footer__copyright">
+          <p class="ping--copyright__para">&copy;Copyright Ping. All rights reserved</p>
+        </div>        
+      </div>
+    </section>
+    <footer id="attribution">
+      <p class="attribution__content">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Samuel Oyediran</a>.
+      </p>
+    </footer>
   </body>
 </html>
