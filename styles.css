@@ -57,7 +57,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80rem;
+  width: 70rem;
   height: 30rem;
   background-color: white;
   border-radius: 1rem;
@@ -81,33 +81,40 @@ footer {
 .article--content__body {
   width: 60%;
   height: 100%;
-  padding: calc(1.5rem + 1vw);
+  padding: 2rem;
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   flex-direction: column;
   align-items: flex-start;
-  /* overflow: visible; */
 }
 
 .article--body__title {
-  font-size: calc(2rem);
+  font-size: 2rem;
   color: var(--color-dark-blue-desaturated);
   font-weight: 700;
   word-spacing: 0.1rem;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+
+  /* marg */
 }
 
 .article--body__para {
-  font-size: calc(1.2rem);
+  font-size: 1.2rem;
   color: var(--color-gray-blue);
   letter-spacing: 0.1rem;
   word-spacing: 0.1rem;
-  word-wrap: break-word;
+  height: 35%;
+  display: flex;
+  align-items: center;
 }
-
 .article--author__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 25%;
   width: 90%;
 }
 
@@ -134,7 +141,13 @@ footer {
   color: var(--color-gray-blue);
 }
 
-.article__share-btn {
+.hidden {
+  display: none;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.article__share-content {
   border-radius: 50%;
   background-color: var(--color-light-gray-blue);
   display: flex;
@@ -147,8 +160,9 @@ footer {
   position: relative;
 }
 
-.article__share-btn > img {
+.article__share-btn {
   object-fit: cover;
+  cursor: pointer;
 }
 
 .share-btn__tooltip {
@@ -160,7 +174,6 @@ footer {
   top: -7rem;
   box-shadow: 0rem 0.4rem 0.8rem 0.4rem #9eafc269;
 
-  /* padding: calc(1rem) calc(2rem); */
   border-radius: 0.8rem;
   width: 25rem;
   height: 5rem;
@@ -204,7 +217,6 @@ footer {
 }
 
 .share__icons {
-  /* margin-right: calc(1rem); */
   padding: 1rem;
 }
 
@@ -216,12 +228,12 @@ footer {
 #attribution {
   justify-content: center;
   align-items: center;
-  padding: calc(1rem + 0.3vw);
+  padding: 1.4rem;
   background-color: rgb(255, 166, 0);
 }
 
 .attribution__content {
-  font-size: calc(1rem + 0.3vw);
+  font-size: calc(1.4rem);
   color: white;
 }
 
@@ -243,16 +255,19 @@ footer {
   }
 }
 
+/* @media screen and (max-width: 700px) {
+  .article--content {
+    width: 90%;
+  }
+} */
+
 @media screen and (max-width: 700px) {
   .article--content {
-    width: 85%;
-    height: 60rem;
+    width: 65%;
+    height: 50rem;
 
     display: flex;
     flex-direction: column;
-  }
-  .article--content__body {
-    padding: calc(1.5rem + 1vw);
   }
 
   .article--content__img {
@@ -273,41 +288,68 @@ footer {
   .article--content__body {
     width: 100%;
     height: 60%;
-    padding: 0 calc(1.5rem + 1vw);
+    padding: 1.75rem;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   .article--content {
+    width: 85%;
     height: 50rem;
   }
 
   .article--content__body {
     width: 100%;
     height: 60%;
-    /* padding: calc(1.5rem + 1vw); */
-  }
-
-  .article--body__title {
-    font-size: calc(1.3rem);
-    color: var(--color-dark-blue-desaturated);
-    font-weight: 700;
-    word-spacing: 0.2rem;
-  }
-
-  .article--body__para {
-    font-size: calc(1rem);
-    color: var(--color-gray-blue);
-    letter-spacing: 0.1rem;
-    word-spacing: 0.1rem;
-    word-wrap: break-word;
   }
 
   .article--author__body {
+    align-items: flex-end;
+  }
+
+  .article--author__body {
+    position: relative;
+    width: 100%;
+  }
+  .article__share-content {
+    position: unset;
+
+    z-index: 0;
+  }
+
+  .article__share-btn {
+    object-fit: cover;
+    cursor: pointer;
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-light-gray-blue);
+  }
+
+  .share-btn__tooltip {
+    left: -1.75rem;
+    top: 25%;
+    border-radius: 0.8rem;
+    height: 100%;
+    width: calc(100% + 3.5rem);
+    z-index: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .share--tooltip__para {
+    margin-left: calc(2.5rem + 1vw);
+    margin-right: calc(1.5rem);
+  }
+
+  /* Creating the arrow for tooltip */
+  .share-btn__tooltip::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .article--content {
     width: 90%;
-    margin-bottom: 0;
   }
 }
