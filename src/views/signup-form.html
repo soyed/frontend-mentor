@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Javascript File -->
+    <script defer src="./index.js"></script>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <section id="signup-section">
+      <div class="signup--info__content">
+        <div class="signup--info">
+          <h1 class="signup--info__title">Learn to code by watching others</h1>
+          <p class="signup--info__para">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+        <div class="signup--registration">
+          <div class="signup--registration__info">
+            <span>Try it for free 7 days</span>
+            then &dollar;20/mo. thereafter
+          </div>
+          <form class="signup--registration__form">
+            <div class="registration--form__input">
+              <div class="form--input__content">
+                <input
+                  type="text"
+                  placeholder="First Name"
+                  class="form__input form__input-1"
+                />
+                <img
+                  class="input__error-icon input__error-icon-1 visible"
+                  src="./images/icon-error.svg"
+                  alt="error-icon"
+                />
+              </div>
+              <p class="form--input__error form--input__error-1"></p>
+            </div>
+            <div class="registration--form__input">
+              <div class="form--input__content">
+                <input
+                  type="text"
+                  placeholder="Last Name"
+                  class="form__input form__input-2"
+                />
+                <img
+                  class="input__error-icon input__error-icon-2 visible"
+                  src="./images/icon-error.svg"
+                  alt="error-icon"
+                />
+              </div>
+              <p class="form--input__error form--input__error-2"></p>
+            </div>
+            <div class="registration--form__input">
+              <div class="form--input__content">
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="form__input form__input-3"
+                />
+                <img
+                  class="input__error-icon input__error-icon-3 visible"
+                  src="./images/icon-error.svg"
+                  alt="error-icon"
+                />
+              </div>
+              <p class="form--input__error form--input__error-3"></p>
+            </div>
+            <div class="registration--form__input">
+              <div class="form--input__content">
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="form__input form__input-4"
+                />
+                <img
+                  class="input__error-icon input__error-icon-4 visible"
+                  src="./images/icon-error.svg"
+                  alt="error-icon"
+                />
+              </div>
+              <p class="form--input__error form--input__error-4"></p>
+            </div>
+            <div class="signup--registration__btn-content">
+              <button type="submit" class="btn-content__register-btn">
+                Claim your free trial
+              </button>
+              <p class="btn-content__para">
+                By clicking the button, you are agreeing to our
+                <span>Terms and Services</span>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer id="attribution">
+      <p class="attribution__content">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Samuel Oyediran</a>.
+      </p>
+    </footer>
+  </body>
+</html>

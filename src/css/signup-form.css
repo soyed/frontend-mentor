@@ -1,0 +1,255 @@
+/* Reset DOM */
+*,
+*::before,
+*::after {
+  margin: 0;
+  bottom: 0;
+}
+
+/*_*_*_*_*_*_*_*_*_*_*_* General Styling *_*_*_*_*_*_*_*_*_*_*_*/
+:root {
+  font-size: 62.5%;
+
+  --color-red: hsl(0, 100%, 74%);
+  --color-green: hsl(154, 59%, 51%);
+  --color-blue: hsl(248, 32%, 49%);
+  --color-dark-blue: hsl(249, 10%, 26%);
+  --color-grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background: url('./images/bg-intro-desktop.png') var(--color-red);
+}
+
+section {
+  display: flex;
+}
+
+footer {
+  display: flex;
+}
+/*_*_*_*_*_*_*_*_*_*_*_* Main Styling *_*_*_*_*_*_*_*_*_*_*_*/
+#signup-section {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup--info__content {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+}
+.signup--info__title {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+  /* width: 100%; */
+}
+
+.signup--info__para {
+  color: white;
+  word-spacing: 0.1rem;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  word-wrap: break-word;
+}
+
+.signup--registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+}
+
+.signup--registration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup--registration__info {
+  background-color: var(--color-blue);
+  border-radius: 0.6rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 70%;
+  padding: 1.3rem 0;
+  text-align: center;
+}
+
+.signup--registration__info span {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.signup--registration__form {
+  background-color: white;
+  border-radius: 0.6rem;
+  width: 70%;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1.3rem;
+  padding: 2rem 0;
+}
+.signup--registration__form > div {
+  margin-bottom: 0.7rem;
+}
+
+.registration--form__input {
+  width: 90%;
+}
+
+.form--input__content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form__input {
+  padding: 1rem;
+  font-weight: 500;
+  border-radius: 0.6rem;
+  border: 0.1rem solid var(--color-grayish-blue);
+  width: 94%;
+
+  font-size: 1.3rem;
+  outline: none;
+}
+
+.form__input--invalid {
+  border-color: var(--color-red);
+}
+
+.visible {
+  display: none;
+}
+
+.input__error-icon {
+  position: absolute;
+  left: calc(100% - 4rem);
+  bottom: 0.5rem;
+}
+
+.form--input__error {
+  margin-top: 0.4rem;
+  font-size: 1.2rem;
+  text-align: end;
+  color: var(--color-red);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.signup--registration__btn-content {
+  width: 85%;
+}
+
+.btn-content__register-btn {
+  width: 100%;
+  color: white;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  background-color: var(--color-green);
+  margin-bottom: 0.7rem;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-content__para {
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  color: var(--color-grayish-blue);
+}
+
+.btn-content__para span {
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+#attribution {
+  background-color: white;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding: calc(0.7rem + 0.3vw);
+}
+
+.attribution__content {
+  color: red;
+  text-align: center;
+}
+
+.attribution__content a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+
+/*_*_*_*_*_*_*_*_*_*_*_* Media Queries *_*_*_*_*_*_*_*_*_*_*_*/
+@media screen and (max-width: 1000px) {
+  .signup--info__content {
+    width: 90%;
+  }
+
+  .signup--registration__info,
+  .signup--registration__form {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .signup--info__content {
+    flex-direction: column;
+    height: 75vh;
+    width: 85%;
+  }
+
+  .signup--info {
+    width: 100%;
+    margin-bottom: 2rem;
+    height: 40%;
+  }
+  .signup--registration {
+    width: 100%;
+    height: 60%;
+  }
+
+  .signup--registration__info,
+  .signup--registration__form {
+    width: 100%;
+  }
+  .signup--registration__form {
+    height: 100%;
+  }
+
+  .signup--info {
+    align-items: center;
+    text-align: center;
+  }
+}
