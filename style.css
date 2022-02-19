@@ -53,6 +53,7 @@ body {
 
 .testimonial__card {
   padding: calc(1rem + 1vw) calc(1.5rem + 1vw);
+  box-shadow: 0.4rem 0.5rem 2rem 0.4rem var(--color-neutral-dark);
 
   border-radius: 2rem;
 
