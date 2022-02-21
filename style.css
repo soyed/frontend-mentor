@@ -27,12 +27,12 @@ a:visited {
 }
 
 body {
-  min-height: 100vh;
   font-size: 1.3rem;
   background-color: var(--color-neutral-light);
 }
 
 .container {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
   grid-template-rows: 1fr min-content;
@@ -53,9 +53,10 @@ body {
 
 .testimonial__card {
   padding: calc(1rem + 1vw) calc(1.5rem + 1vw);
+
   box-shadow: 0.4rem 0.5rem 2rem 0.4rem var(--color-neutral-dark);
 
-  border-radius: 2rem;
+  border-radius: 1rem;
 
   display: flex;
   justify-content: start;
