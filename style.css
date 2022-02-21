@@ -17,11 +17,11 @@
   --color-primary-light: #f7f2f7;
   --color-primary-dark: #937b92;
   --color-secondary: #ee68a4;
+  --color-secondary-m: #000000;
   --color-neutral: #ffffff;
 }
 
 body {
-  min-height: 100vh;
   font-size: 1.3rem;
   background: url('./images/bg-pattern-top-desktop.svg'),
     url('./images/bg-pattern-bottom-desktop.svg');
@@ -31,6 +31,7 @@ body {
 }
 
 .container {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
   grid-template-rows: repeat(2, 1fr) min-content;
@@ -186,7 +187,7 @@ a:visited {
 }
 
 .attribution a {
-  color: var(--color-secondary);
+  color: var(--color-secondary-m);
 }
 
 /* Media Queries */
