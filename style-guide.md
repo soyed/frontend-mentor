@@ -11,28 +11,37 @@ The designs were created to the following widths:
 
 ### Primary
 
-Moderate violet: hsl(263, 55%, 52%)
-Very dark grayish blue: hsl(217, 19%, 35%)
-Very dark blackish blue: hsl(219, 29%, 14%)
-White: hsl(0, 0%, 100%)
+- Soft red: hsl(7, 99%, 70%)
+- Yellow: hsl(51, 100%, 49%)
+- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
+- Dark blue (photography text): hsl(198, 62%, 26%)
+- Dark moderate cyan (footer): hsl(168, 34%, 41%)
 
 ### Neutral
 
-Light gray: hsl(0, 0%, 81%)
-Light grayish blue: hsl(210, 46%, 95%)
-
-Note for text colors:
-
-1. "Verified Graduate" has the same color as the person's name with 50% opacity
-2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+- Very dark desaturated blue: hsl(212, 27%, 19%)
+- Very dark grayish blue: hsl(213, 9%, 39%)
+- Dark grayish blue: hsl(232, 10%, 55%)
+- Grayish blue: hsl(210, 4%, 67%)
+- White: hsl(0, 0%, 100%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 13px
+- Font size: 18px
 
 ### Font
 
-- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
-- Weights: 500, 600
+- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
+- Weights: 600
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700, 900
+
+## Icons
+
+We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)
