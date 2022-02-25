@@ -12,11 +12,11 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <title>Frontend Mentor | FAQ Accordion Card</title>
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -25,358 +25,135 @@
 
     <!-- Javascript File -->
     <script defer src="./index.js"></script>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
   </head>
   <body>
     <main class="container">
-      <!-- Hero  -->
+      <div class="faq-container">
+        <div class="faq">
+          <!-- FAQ IMAGE -->
+          <div class="faq__collage">
+            <img src="./images/illustration-box-desktop.svg" alt="" />
 
-      <section class="hero">
-        <header class="hero__header">
-          <!-- Header Hamburger -->
-          <div class="hero__header--hamburger hidden">
-            <img
-              src="./images/icon-hamburger.svg"
-              alt="Sunnyside menu icon displaying all navigation items"
-              title="Sunnyside Menu Icon"
-              class="hero__header--hamburger__icon"
-            />
+            <img src="./images/illustration-woman-online-desktop.svg" alt="" />
+            <img src="./images/bg-pattern-desktop.svg" alt="" />
           </div>
-          <!-- Header Nav  -->
-          <nav class="hero__header--nav">
-            <!-- Nav Title -->
-            <a
-              href="#"
-              aria-label="Sunnyside Home page Link"
-              class="hero__header--nav__logo"
-            >
-              <img
-                src="./images/logo.svg"
-                alt="Sunnyside Logo in a bold, and white text."
-                title="Sunnyside Logo"
-              />
-            </a>
-            <!-- Nav Items -->
-            <ul class="hero__header--nav__list">
-              <li class="hero__header--nav__list--item">
-                <a href="#" aria-label="About Page Link">About</a>
-              </li>
-              <li class="hero__header--nav__list--item">
-                <a href="#" aria-label="Services Page Link">Services</a>
-              </li>
-              <li class="hero__header--nav__list--item">
-                <a href="#" aria-label="Projects Page Link">Projects</a>
-              </li>
-              <div class="hero__header--nav__list--item">
-                <button
-                  class="hero__header--nav__contact--btn"
-                  aria-label="Contact Us Button"
-                >
-                  Contact
-                </button>
+          <!-- FAQ Content -->
+          <div class="faq__content">
+            <h1 class="faq__content--title">FAQ</h1>
+
+            <div class="faq__content-container">
+              <div class="faq__content--card">
+                <div class="faq__content--card__question">
+                  <p>How many team members can I invite?</p>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt="An orange arrow icon"
+                    title="Arrow Icon"
+                  />
+                </div>
+                <div class="faq__content--card__answer">
+                  <p>
+                    You can invite up to 2 additional users on the Free plan.
+                    There is no limit on team members for the Premium plan.
+                  </p>
+                </div>
+                <span></span>
               </div>
-            </ul>
-          </nav>
-        </header>
-
-        <!-- Hero Section -->
-        <section class="hero__main">
-          <h1 class="hero__main--title">We are Creatives</h1>
-          <!-- the white mark -->
-          <div></div>
-        </section>
-      </section>
-
-      <!-- Services -->
-      <section class="services">
-        <div class="services__card services__card--1">
-          <h2 class="services__card--title">Transform your brand</h2>
-          <p class="services__card--para">
-            We are a full-service creative agency specializing in helping brands
-            grow fast. Engage your clients through compelling visuals that do
-            most of the marketing for you.
-          </p>
-          <a href="#" class="services__card--link" aria-label="Learn more link"
-            >Learn more</a
-          >
-        </div>
-        <div class="services__card services__card--2">
-          <!-- <div class="services__card--content">
-            <img
-              src="./images/desktop/image-transform.jpg"
-              alt="An image containing a white egg on a yellow background."
-              title="Egg Image"
-              class="active--image"
-            />
-            <img
-              src="./images/mobile/image-transform.jpg"
-              alt="An image containing a white egg on a yellow background."
-              title="Egg Image"
-              class="hidden-image"
-            />
-          </div> -->
-        </div>
-        <div class="services__card services__card--3">
-          <!-- <div class="services__card--content">
-            <img
-              src="./images/desktop/image-stand-out.jpg"
-              alt="An image containing a light pink wine cup on a dark pink background."
-              title="Wine Cup Image"
-              class="active--image"
-            />
-            <img
-              src="./images/mobile/image-stand-out.jpg"
-              alt="An image containing a light pink wine cup on a dark pink background."
-              title="Wine Cup Image"
-              class="hidden-image"
-            />
-          </div> -->
-        </div>
-        <div class="services__card services__card--4">
-          <h2 class="services__card--title">Stand out to the right audience</h2>
-          <p class="services__card--para">
-            Using a collaborative formula of designers, researchers,
-            photographers, videographers, and copywriters, we'll build and
-            extend your brand in digital places.
-          </p>
-          <a href="#" class="services__card--link" aria-label="Learn more link"
-            >Learn more</a
-          >
-        </div>
-        <div class="services__card services__card--5">
-          <h2 class="services__card--title">Graphic Design</h2>
-          <p class="services__card--para">
-            Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential client's
-            attention.
-          </p>
-        </div>
-        <div class="services__card services__card--6">
-          <h2 class="services__card--title">Photography</h2>
-          <p class="services__card--para">
-            Increase your credibility by getting the most stunning, high-quality
-            photos that improve your business image.
-          </p>
-        </div>
-      </section>
-      <!-- Testimonials -->
-      <section class="testimonials">
-        <div class="testimonials__heading">
-          <h2 class="testimonials__heading--title">Client Testimonials</h2>
-        </div>
-
-        <div class="testimonials--card">
-          <div class="testimonials--card__heading">
-            <img
-              src="./images/image-emily.jpg"
-              alt="A photo of Emily in a flower patterned shirt"
-              title="Emily R's photo"
-            />
+              <div class="faq__content--card">
+                <div class="faq__content--card__question">
+                  <p>What is the maximum file upload size?</p>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt="An orange arrow icon"
+                    title="Arrow Icon"
+                  />
+                </div>
+                <div class="faq__content--card__answer">
+                  <p>
+                    No more than 2GB. All files in your account must fit your
+                    allotted storage space.
+                  </p>
+                </div>
+                <span></span>
+              </div>
+              <div class="faq__content--card">
+                <div class="faq__content--card__question">
+                  <p>How do I reset my password?</p>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt="An orange arrow icon"
+                    title="Arrow Icon"
+                  />
+                </div>
+                <div class="faq__content--card__answer">
+                  <p>
+                    Click “Forgot password” from the login page or “Change
+                    password” from your profile page. A reset link will be
+                    emailed to you.
+                  </p>
+                </div>
+                <span></span>
+              </div>
+              <div class="faq__content--card">
+                <div class="faq__content--card__question">
+                  <p>Can I cancel my subscription?</p>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt="An orange arrow icon"
+                    title="Arrow Icon"
+                  />
+                </div>
+                <div class="faq__content--card__answer">
+                  <p>
+                    Yes! Send us a message and we’ll process your request no
+                    questions asked.
+                  </p>
+                </div>
+                <span></span>
+              </div>
+              <div class="faq__content--card">
+                <div class="faq__content--card__question">
+                  <p>Do you provide additional support?</p>
+                  <img
+                    src="./images/icon-arrow-down.svg"
+                    alt="An orange arrow icon"
+                    title="Arrow Icon"
+                  />
+                </div>
+                <div class="faq__content--card__answer">
+                  <p>
+                    Chat and email support is available 24/7. Phone lines are
+                    open during normal business hours.
+                  </p>
+                </div>
+                <span></span>
+              </div>
+            </div>
           </div>
-          <div class="testimonials--card__message">
-            <p>
-              We put our trust in Sunnyside and they delivered, making sure our
-              needs were met and deadlines were always hit.
-            </p>
-          </div>
-          <div class="testimonials--card__title">
-            <h3>Emily R.</h3>
-            <p>Marketing Director</p>
-          </div>
-        </div>
-        <div class="testimonials--card">
-          <div class="testimonials--card__heading">
-            <img
-              src="./images/image-thomas.jpg"
-              alt="A photo of Thomas in white t-shirt in a grayish background."
-              title="Emily R's photo"
-            />
-          </div>
-          <div class="testimonials--card__message">
-            <p>
-              Sunnyside's enthusiasm coupled with their keen interest in our
-              brand's success made it a satisfying and enjoyable experience.
-            </p>
-          </div>
-          <div class="testimonials--card__title">
-            <h3>Thomas S.</h3>
-            <p>Chief Operating Officer</p>
-          </div>
-        </div>
-        <div class="testimonials--card">
-          <div class="testimonials--card__heading">
-            <img
-              src="./images/image-jennie.jpg"
-              alt="A photo of Jennie in a black top"
-              title="Emily R's photo"
-            />
-          </div>
-          <div class="testimonials--card__message">
-            <p>
-              Incredible end result! Our sales increased over 400% when we
-              worked with Sunnyside. Highly recommended!
-            </p>
-          </div>
-          <div class="testimonials--card__title">
-            <h3>Jennie F.</h3>
-            <p>Business Owner</p>
-          </div>
-        </div>
-      </section>
-      <!-- Gallery  -->
-      <div class="gallery">
-        <div class="gallery__item gallery__item--1">
-          <img
-            src="./images/desktop/image-gallery-milkbottles.jpg"
-            aria-labelledby="gallery__item--bottle"
-            title="Milk Bottles"
-          />
-          <img
-            src="./images/mobile/image-gallery-milkbottles.jpg"
-            aria-labelledby="gallery__item--bottle"
-            title="Milk Bottles"
-            class="hidden"
-          />
-          <p id="gallery__item--bottle" class="hidden">
-            A image containing milk bottles in a sky blue background with some
-            clouds displaying.
-          </p>
-        </div>
-        <div class="gallery__item gallery__item--2">
-          <img
-            src="./images/desktop/image-gallery-orange.jpg"
-            aria-labelledby="gallery__item--orange"
-            title="Orange"
-          />
-          <img
-            src="./images/mobile/image-gallery-orange.jpg"
-            aria-labelledby="gallery__item--orange"
-            title="Orange Image"
-            class="hidden"
-          />
-          <p id="gallery__item--orange" class="hidden">
-            A image containing half an orange placed inside a white and sky blue
-            dish, in an orange background.
-          </p>
-        </div>
-        <div class="gallery__item gallery__item--3">
-          <img
-            src="./images/desktop/image-gallery-cone.jpg"
-            aria-labelledby="gallery__item--cone"
-            title="Ice cream cone Image"
-          />
-          <img
-            src="./images/mobile/image-gallery-cone.jpg"
-            aria-labelledby="gallery__item--cone"
-            title="Ice cream cone Image"
-            class="hidden"
-          />
-          <p id="gallery__item--cone" class="hidden">
-            A image containing an ice cream cone in a sky blue background.
-          </p>
-        </div>
-        <div class="gallery__item gallery__item--4">
-          <img
-            src="./images/desktop/image-gallery-sugarcubes.jpg"
-            aria-labelledby="gallery__item--sugar"
-            title="Sugar Cubes Image"
-          />
-          <img
-            src="./images/mobile/image-gallery-sugar-cubes.jpg"
-            aria-labelledby="gallery__item--sugar"
-            title="Sugar Cubes Image"
-            class="hidden"
-          />
-          <p id="gallery__item--cone" class="hidden">
-            A image containing sugar cubes in a pink background.
-          </p>
         </div>
       </div>
-      <!-- Footer -->
+
+      <!-- Footer Component -->
       <footer class="footer">
-        <div class="footer__heading">
-          <!-- <h2 class="footer__heading--title">Sunnyside</h2> -->
-          <a
-            href="#"
-            aria-label="Sunnyside Home page Link"
-            class="footer__heading--title"
-          >
-            <img
-              src="./images/logo.svg"
-              alt="Sunnyside Logo in a bold, and white text."
-              title="Sunnyside Logo"
-            />
-          </a>
-        </div>
-        <div class="footer__links">
-          <p class="footer__links--para">About</p>
-          <p class="footer__links--para">Services</p>
-          <p class="footer__links--para">Projects</p>
-        </div>
-
-        <div class="footer__social">
-          <ul class="footer__social--list">
-            <li class="footer__social--list__item">
-              <a
-                href="https://facebook.com"
-                aria-label="Facebook Icon"
-                target="_blank"
-              >
-                <img
-                  src="./images/icon-facebook.svg"
-                  alt="Facebook icon with a light green fill and dark green background"
-                  title="Facebook Icon"
-                />
-              </a>
-            </li>
-            <li class="footer__social--list__item">
-              <a
-                href="https://instagram.com"
-                aria-label="Instagram Icon"
-                target="_blank"
-              >
-                <img
-                  src="./images/icon-instagram.svg"
-                  alt="Instagram icon with a light green fill and dark green border"
-                  title="Instagram Icon"
-                />
-              </a>
-            </li>
-            <li class="footer__social--list__item">
-              <a
-                href="https://twitter.com"
-                aria-label="Twitter Icon"
-                target="_blank"
-              >
-                <img
-                  src="./images/icon-twitter.svg"
-                  alt="Twitter icon with a dark green fill"
-                  title="Instagram Icon"
-                />
-              </a>
-            </li>
-            <li class="footer__social--list__item">
-              <a
-                href="https://pinterest.com"
-                aria-label="PInterest Icon"
-                target="_blank"
-              >
-                <img
-                  src="./images/icon-pinterest.svg"
-                  alt="PInterest icon with a dark green fill and a light green text"
-                  title="PInterest Icon"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <p class="footer__attribution">
+        <div class="footer__attribution">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
           >. Coded by
-          <a href="https:/github.com/soyed" target="_blank">Samuel Oyediran.</a>
-        </p>
+          <a href="https://www.github.com/soyed" target="_blank"
+            >Samuel Oyediran</a
+          >.
+        </div>
       </footer>
     </main>
   </body>
