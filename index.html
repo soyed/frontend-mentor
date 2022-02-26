@@ -12,146 +12,221 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | FAQ Accordion Card</title>
+    <title>Frontend Mentor | Loopstudios landing page</title>
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-
     <!-- CSS File -->
     <link rel="stylesheet" href="./style.css" />
 
     <!-- Javascript File -->
     <script defer src="./index.js"></script>
-
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main class="container">
-      <div class="faq-container">
-        <div class="faq">
-          <!-- FAQ IMAGE -->
-          <div class="faq__collage">
-            <img src="./images/illustration-box-desktop.svg" alt="" />
-
-            <img src="./images/illustration-woman-online-desktop.svg" alt="" />
-            <img src="./images/bg-pattern-desktop.svg" alt="" />
+      <!-- Hero section -->
+      <section class="hero">
+        <!-- Header -->
+        <header class="hero__header">
+          <!-- Hero Hamburger Menu -->
+          <div class="hero__header--hamburger">
+            <img
+              id="header__hamburger--icon"
+              src="./images/icon-hamburger.svg"
+              alt=""
+            />
           </div>
-          <!-- FAQ Content -->
-          <div class="faq__content">
-            <h1 class="faq__content--title">FAQ</h1>
-
-            <div class="faq__content-container">
-              <div class="faq__content--card">
-                <div class="faq__content--card__question">
-                  <p>How many team members can I invite?</p>
-                  <img
-                    src="./images/icon-arrow-down.svg"
-                    alt="An orange arrow icon"
-                    title="Arrow Icon"
-                  />
-                </div>
-                <div class="faq__content--card__answer">
-                  <p>
-                    You can invite up to 2 additional users on the Free plan.
-                    There is no limit on team members for the Premium plan.
-                  </p>
-                </div>
-                <span></span>
-              </div>
-              <div class="faq__content--card">
-                <div class="faq__content--card__question">
-                  <p>What is the maximum file upload size?</p>
-                  <img
-                    src="./images/icon-arrow-down.svg"
-                    alt="An orange arrow icon"
-                    title="Arrow Icon"
-                  />
-                </div>
-                <div class="faq__content--card__answer">
-                  <p>
-                    No more than 2GB. All files in your account must fit your
-                    allotted storage space.
-                  </p>
-                </div>
-                <span></span>
-              </div>
-              <div class="faq__content--card">
-                <div class="faq__content--card__question">
-                  <p>How do I reset my password?</p>
-                  <img
-                    src="./images/icon-arrow-down.svg"
-                    alt="An orange arrow icon"
-                    title="Arrow Icon"
-                  />
-                </div>
-                <div class="faq__content--card__answer">
-                  <p>
-                    Click “Forgot password” from the login page or “Change
-                    password” from your profile page. A reset link will be
-                    emailed to you.
-                  </p>
-                </div>
-                <span></span>
-              </div>
-              <div class="faq__content--card">
-                <div class="faq__content--card__question">
-                  <p>Can I cancel my subscription?</p>
-                  <img
-                    src="./images/icon-arrow-down.svg"
-                    alt="An orange arrow icon"
-                    title="Arrow Icon"
-                  />
-                </div>
-                <div class="faq__content--card__answer">
-                  <p>
-                    Yes! Send us a message and we’ll process your request no
-                    questions asked.
-                  </p>
-                </div>
-                <span></span>
-              </div>
-              <div class="faq__content--card">
-                <div class="faq__content--card__question">
-                  <p>Do you provide additional support?</p>
-                  <img
-                    src="./images/icon-arrow-down.svg"
-                    alt="An orange arrow icon"
-                    title="Arrow Icon"
-                  />
-                </div>
-                <div class="faq__content--card__answer">
-                  <p>
-                    Chat and email support is available 24/7. Phone lines are
-                    open during normal business hours.
-                  </p>
-                </div>
-                <span></span>
-              </div>
+          <nav class="hero__header--nav">
+            <!-- Hero Header title -->
+            <div class="hero__header--nav__logo">
+              <a href="#" aria-label="Loopstudios Logo">
+                <img
+                  src="./images/logo.svg"
+                  alt="Loopstudios Logo in a bold text"
+                  title="Loopstudios Logo"
+                />
+              </a>
             </div>
+            <ul>
+              <li><a href="#" aria-label="About Link">About</a></li>
+              <li><a href="#" aria-label="Careers Link">Careers</a></li>
+              <li><a href="#" aria-label="Events Link">Events</a></li>
+              <li><a href="#" aria-label="Products Link">Products</a></li>
+              <li><a href="#" aria-label="Support Link">Support</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <div class="hero__main">
+          <div class="hero__main--content">
+            <h1 class="hero__main--title">
+              Immersive Experiences that deliver
+            </h1>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="company">
+        <div class="company-container">
+          <div class="company__image">
+            <img
+              src="./images/desktop/image-interactive.jpg"
+              alt="A photo with a person using an virtual reality headset."
+              title="Virtual Reality Image"
+            />
+          </div>
 
-      <!-- Footer Component -->
+          <div class="company__content">
+            <h2 class="company__content--title">
+              The leader in interactive VR
+            </h2>
+            <p class="company__content--para">
+              Founded in 20111, Loopstudios has been producing world-class
+              virtual reality projects for some of the best companies around the
+              globe. Our award-winning creations have transformed businesses
+              through digital experiences that bind to their brand.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery">
+        <!-- Gallery Header -->
+        <div class="gallery__header">
+          <h2 class="gallery__header--title">Our Creations</h2>
+        </div>
+        <!-- Gallery Button -->
+        <div class="gallery__more">
+          <div class="gallery__more--btn">See All</div>
+        </div>
+
+        <!-- Gallery Cards -->
+        <div class="gallery__card gallery__card--1">
+          <h3 class="gallery__card--title">deep earth</h3>
+        </div>
+
+        <div class="gallery__card gallery__card--2">
+          <h3 class="gallery__card--title">Night Arcade</h3>
+        </div>
+
+        <div class="gallery__card gallery__card--3">
+          <h3 class="gallery__card--title">soccer team vr</h3>
+        </div>
+
+        <div class="gallery__card gallery__card--4">
+          <h3 class="gallery__card--title">the grid</h3>
+        </div>
+
+        <div class="gallery__card gallery__card--5">
+          <h3 class="gallery__card--title">from up above vr</h3>
+        </div>
+
+        <div class="gallery__card gallery__card--6">
+          <h3 class="gallery__card--title">pocket borealis</h3>
+        </div>
+
+        <div class="gallery__card gallery__card--7">
+          <h3 class="gallery__card--title">the curiosity</h3>
+        </div>
+
+        <div class="gallery__card gallery__card--8">
+          <h3 class="gallery__card--title">make it fisheye</h3>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
       <footer class="footer">
+        <div class="footer-container">
+          <!-- Footer content -->
+          <div class="footer__content">
+            <div class="footer__content--title">
+              <img
+                src="./images/logo.svg"
+                alt="Loopstudios logo in a white bold text"
+                title="Loopstudios"
+              />
+            </div>
+
+            <div class="footer__content--menu">
+              <p>About</p>
+              <p>Careers</p>
+              <p>Events</p>
+              <p>Products</p>
+              <p>Support</p>
+            </div>
+          </div>
+          <!-- Footer Socials -->
+          <div class="footer__socials">
+            <ul class="footer__socials--icons">
+              <li>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  aria-label="Facebook Icon Link"
+                >
+                  <img
+                    src="./images/icon-facebook.svg"
+                    alt="Facebook Logo with a white background and black text color"
+                    title="Facebook Link"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  aria-label="Twitter Icon Link"
+                >
+                  <img
+                    src="./images/icon-twitter.svg"
+                    alt="Twitter Logo with a white background"
+                    title="Twitter Link"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://pinterest.com"
+                  target="_blank"
+                  aria-label="PInterest Icon Link"
+                >
+                  <img
+                    src="./images/icon-pinterest.svg"
+                    alt="PInterest Logo with a white background and black text color"
+                    title="PInterest Link"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  aria-label="Instagram Icon Link"
+                >
+                  <img
+                    src="./images/icon-instagram.svg"
+                    alt="Instagram Logo with a white border, and black background color"
+                    title="Instagram Link"
+                  />
+                </a>
+              </li>
+            </ul>
+
+            <p class="footer__socials--copyright">
+              &copy; 2021 Loopstudios. All rights reserved.
+            </p>
+          </div>
+        </div>
+
         <div class="footer__attribution">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
           >. Coded by
-          <a href="https://www.github.com/soyed" target="_blank"
-            >Samuel Oyediran</a
+          <a href="https://github.com/soyed" target="_blank">Samuel Oyediran</a
           >.
         </div>
       </footer>

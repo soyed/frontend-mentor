@@ -1,29 +1,20 @@
-const faqRows = document.querySelectorAll('.faq__content--card');
+// Elements
+const menuButton = document.querySelector('.hero__header--hamburger');
+const menuImage = document.getElementById('header__hamburger--icon');
+const menu = document.querySelector('.hero__header--nav');
 
-/**
- * This method loops through FAQ row and closes any active row
- */
-const closeActiveRow = (activeIndex) => {
-  faqRows.forEach((row, index) => {
-    // => Edge case => When the active row is the only active row and is toggled => return
-    if (index == activeIndex) return;
-    if (row.classList.contains('faq__content--card__active')) {
-      // => remove active row
-      row.classList.remove('faq__content--card__active');
+// => toggle hamburger button
+if (menuButton) {
+  menuButton.addEventListener('click', () => {
+    // => Check grab the existing src
+    const iconStatus = menuImage.src.includes('icon-hamburger');
+    // => toggle the image src based on its src
+    if (iconStatus) {
+      menuImage.src = './images/icon-close.svg';
+    } else {
+      menuImage.src = './images/icon-hamburger.svg';
     }
-  });
-};
 
-// => Edge Case => Ensure FAQ rows exist
-if (faqRows) {
-  // => Add event listener to each row and toggle "faq__content--card__active"
-  faqRows.forEach((row, index) => {
-    row.addEventListener('click', () => {
-      // => Check if there is any active row
-      // => if true => close the row and update state
-      closeActiveRow(index);
-      // => Toggle the clicked row
-      row.classList.toggle('faq__content--card__active');
-    });
+    menu.classList.toggle('hero__header--nav__active');
   });
 }
