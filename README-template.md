@@ -1,6 +1,6 @@
-# Frontend Mentor - Loopstudios landing page solution
+# Frontend Mentor - Pricing component with toggle solution
 
-This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Pricing component with toggle challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pricing-component-with-toggle-8vPwRMIC). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
@@ -24,8 +24,9 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+- View the optimal layout for the component depending on their device's screen size
+- Control the toggle with both their mouse/trackpad and their keyboard
+- **Bonus**: Complete the challenge with just HTML and CSS
 
 ### Screenshot
 
