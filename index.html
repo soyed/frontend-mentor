@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -12,101 +11,323 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Pricing Component</title>
+    <title>Frontend Mentor | Social Media Dashboard</title>
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Style Sheet -->
+    <!-- CSS File -->
     <link rel="stylesheet" href="./style.css" />
-    <!-- Javascript -->
+    <!-- Javascript File -->
     <script defer src="./index.js"></script>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
   <body>
     <main class="container">
-      <header class="header">
-        <div class="header__heading">
-          <h1 class="header__heading--title">Our Pricing</h1>
-        </div>
-        <div class="header__content">
-          <p class="header__content--para">Annually</p>
-          <div class="header__content--btn">Button</div>
-          <p class="header__content--para">Monthly</p>
-        </div>
-      </header>
-
-      <section class="pricing">
-        <div class="pricing-container">
-          <div class="pricing__card">
-            <div class="pricing__card--header">
-              <p>Basic</p>
-              <h2 class="pricing__card--header__active">&dollar;19.99</h2>
-              <!-- <h2>&dollar;199.99</h2> -->
+      <!-- dashboard-socials -->
+      <!-- TODO: Bind Socials and Overview into one grid = >Easier to control across all the screen sizes -->
+      <section class="socials">
+        <div class="socials-container">
+          <div class="socials__header">
+            <div class="socials__header--content">
+              <h1>Social Media Dashboard</h1>
+              <p>Total Followers: 23,004</p>
             </div>
-            <div class="pricing__card--details">
-              <p>500 GB Storage</p>
-              <p>2 Users Allowed</p>
-              <p>Send up to 3 GB</p>
-            </div>
-
-            <div class="pricing__card--more">
-              <button class="" aria-label="Learn More Button">
-                Learn more
-              </button>
+            <div class="socials__header--toggle">
+              <p class="toggle--status">Dark Mode</p>
+              <div>
+                <input type="checkbox" name="theme" id="toggle--btn" />
+              </div>
             </div>
           </div>
-          <div class="pricing__card">
-            <div class="pricing__card--header">
-              <p>Professional</p>
-              <h2 class="pricing__card--header__active">&dollar;24.99</h2>
-              <!-- <h2>&dollar;249.99</h2> -->
+          <!-- Social Account Card -->
+          <div class="socials__card">
+            <div class="socials__card--user">
+              <img
+                src="./images/icon-facebook.svg"
+                alt="Facebook Logo"
+                title="Facebook Logo"
+              />
+              <p>@nathanf</p>
             </div>
-            <div class="pricing__card--details">
-              <p>1 TB Storage</p>
-              <p>5 Users Allowed</p>
-              <p>Send up to 10 GB</p>
+            <div class="social__card--followers">
+              <h2>1987</h2>
+              <p>followers</p>
             </div>
-
-            <div class="pricing__card--more">
-              <button class="" aria-label="Learn More Button">
-                Learn more
-              </button>
+            <div class="social__card--stat">
+              <img
+                src="./images/icon-up.svg"
+                alt="Icon pointing up indicating a follower count increase"
+                title="Follower Count Up"
+              />
+              <p class="socials__card--increase">12 Today</p>
             </div>
           </div>
-          <div class="pricing__card">
-            <div class="pricing__card--header">
-              <p>Professional</p>
-              <h2 class="pricing__card--header__active">&dollar;39.99</h2>
-              <!-- <h2>&dollar;399.99</h2> -->
-            </div>
-            <div class="pricing__card--details">
-              <p>2 TB Storage</p>
-              <p>10 Users Allowed</p>
-              <p>Send up to 20 GB</p>
-            </div>
 
-            <div class="pricing__card--more">
-              <button class="" aria-label="Learn More Button">
-                Learn more
-              </button>
+          <div class="socials__card">
+            <div class="socials__card--user">
+              <img
+                src="./images/icon-twitter.svg"
+                alt="Twitter Logo"
+                title="Twitter Logo"
+              />
+              <p>@nathanf</p>
+            </div>
+            <div class="social__card--followers">
+              <h2>1044</h2>
+              <p>followers</p>
+            </div>
+            <div class="social__card--stat">
+              <img
+                src="./images/icon-up.svg"
+                alt="Icon pointing up indicating a follower count increase"
+                title="Follower Count Up"
+              />
+              <p class="socials__card--increase">99 Today</p>
+            </div>
+          </div>
+
+          <div class="socials__card">
+            <div class="socials__card--user">
+              <img
+                src="./images/icon-instagram.svg"
+                alt="Instagram Logo"
+                title="Instagram Logo"
+              />
+              <p>@realnathanf</p>
+            </div>
+            <div class="social__card--followers">
+              <h2>11k</h2>
+              <p>followers</p>
+            </div>
+            <div class="social__card--stat">
+              <img
+                src="./images/icon-up.svg"
+                alt="Icon pointing up indicating a follower count increase"
+                title="Follower Count Up"
+              />
+              <p class="socials__card--increase">1099 Today</p>
+            </div>
+          </div>
+
+          <div class="socials__card">
+            <div class="socials__card--user">
+              <img
+                src="./images/icon-youtube.svg"
+                alt="Youtube Logo"
+                title="Youtube Logo"
+              />
+              <p>Nathan F.</p>
+            </div>
+            <div class="social__card--followers">
+              <h2>8239</h2>
+              <p>subscribers</p>
+            </div>
+            <div class="social__card--stat">
+              <img
+                src="./images/icon-down.svg"
+                alt="Icon pointing down indicating a follower decrease"
+                title="Follower Count Down"
+              />
+              <p class="socials__card--decrease">144 Today</p>
+            </div>
+          </div>
+
+          <!-- social overview -->
+          <div class="socials__overview--header socials__header">
+            <h2>Overview - Today</h2>
+          </div>
+
+          <div class="socials__card socials__card--overview">
+            <div class="socials__card--overview__header">
+              <h3>Page Views</h3>
+              <img
+                src="./images/icon-facebook.svg"
+                alt="Facebook Logo"
+                title="Facebook Logo"
+              />
+            </div>
+            <div class="socials__card--overview__content">
+              <h3>87</h3>
+              <div class="socials__card--overview__content--logo">
+                <img
+                  src="./images/icon-up.svg"
+                  alt="Icon pointing up indicating a follower count increase"
+                  title="Follower Count Up"
+                />
+                <p class="socials__card--increase">3&percnt;</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials__card socials__card--overview">
+            <div class="socials__card--overview__header">
+              <h3>Likes</h3>
+              <img
+                src="./images/icon-facebook.svg"
+                alt="Facebook Logo"
+                title="Facebook Logo"
+              />
+            </div>
+            <div class="socials__card--overview__content">
+              <h3>52</h3>
+              <div class="socials__card--overview__content--logo">
+                <img
+                  src="./images/icon-down.svg"
+                  alt="Icon pointing down indicating a follower decrease"
+                  title="Follower Count Down"
+                />
+                <p class="socials__card--decrease">2&percnt;</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials__card socials__card--overview">
+            <div class="socials__card--overview__header">
+              <h3>Likes</h3>
+              <img
+                src="./images/icon-instagram.svg"
+                alt="Instagram Logo"
+                title="Instagram Logo"
+              />
+            </div>
+            <div class="socials__card--overview__content">
+              <h3>5462</h3>
+              <div class="socials__card--overview__content--logo">
+                <img
+                  src="./images/icon-up.svg"
+                  alt="Icon pointing up indicating a follower count increase"
+                  title="Follower Count Up"
+                />
+                <p class="socials__card--increase">2257&percnt;</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials__card socials__card--overview">
+            <div class="socials__card--overview__header">
+              <h3>Profile Views</h3>
+              <img
+                src="./images/icon-instagram.svg"
+                alt="Instagram Logo"
+                title="Instagram Logo"
+              />
+            </div>
+            <div class="socials__card--overview__content">
+              <h3>52k</h3>
+              <div class="socials__card--overview__content--logo">
+                <img
+                  src="./images/icon-up.svg"
+                  alt="Icon pointing up indicating a follower count increase"
+                  title="Follower Count Up"
+                />
+                <p class="socials__card--increase">1375&percnt;</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials__card socials__card--overview">
+            <div class="socials__card--overview__header">
+              <h3>Retweets</h3>
+              <img
+                src="./images/icon-twitter.svg"
+                alt="Twitter Logo"
+                title="Twitter Logo"
+              />
+            </div>
+            <div class="socials__card--overview__content">
+              <h3>117</h3>
+              <div class="socials__card--overview__content--logo">
+                <img
+                  src="./images/icon-up.svg"
+                  alt="Icon pointing up indicating a follower count increase"
+                  title="Follower Count Up"
+                />
+                <p class="socials__card--increase">303&percnt;</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials__card socials__card--overview">
+            <div class="socials__card--overview__header">
+              <h3>Retweets</h3>
+              <img
+                src="./images/icon-twitter.svg"
+                alt="Twitter Logo"
+                title="Twitter Logo"
+              />
+            </div>
+            <div class="socials__card--overview__content">
+              <h3>507</h3>
+              <div class="socials__card--overview__content--logo">
+                <img
+                  src="./images/icon-up.svg"
+                  alt="Icon pointing up indicating a follower count increase"
+                  title="Follower Count Up"
+                />
+                <p class="socials__card--increase">553&percnt;</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials__card socials__card--overview">
+            <div class="socials__card--overview__header">
+              <h3>Likes</h3>
+              <img
+                src="./images/icon-youtube.svg"
+                alt="Youtube Logo"
+                title="Youtube Logo"
+              />
+            </div>
+            <div class="socials__card--overview__content">
+              <h3>107</h3>
+              <div class="socials__card--overview__content--logo">
+                <img
+                  src="./images/icon-down.svg"
+                  alt="Icon pointing down indicating a follower decrease"
+                  title="Follower Count Down"
+                />
+                <p class="socials__card--decrease">19&percnt;</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="socials__card socials__card--overview">
+            <div class="socials__card--overview__header">
+              <h3>Total Views</h3>
+              <img
+                src="./images/icon-youtube.svg"
+                alt="Youtube Logo"
+                title="Youtube Logo"
+              />
+            </div>
+            <div class="socials__card--overview__content">
+              <h3>1407</h3>
+              <div class="socials__card--overview__content--logo">
+                <img
+                  src="./images/icon-down.svg"
+                  alt="Icon pointing down indicating a follower decrease"
+                  title="Follower Count Down"
+                />
+                <p class="socials__card--decrease">12&percnt;</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Footer -->
       <footer class="footer">
-        <p class="footer__attribution">
+        <div class="footer__attribution">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
           >. Coded by
-          <a href="https:/github.com/soyed" target="_blank">Samuel Oyediran</a>.
-        </p>
+          <a href="https://github.com/soyed" target="_blank"
+            >Samuel Oyediran.</a
+          >
+        </div>
       </footer>
     </main>
   </body>
