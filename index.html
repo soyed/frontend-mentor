@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -11,314 +12,260 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Social Media Dashboard</title>
+    <title>Frontend Mentor | Insure landing page</title>
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <!-- CSS File -->
     <link rel="stylesheet" href="./style.css" />
+
     <!-- Javascript File -->
     <script defer src="./index.js"></script>
   </head>
   <body>
     <main class="container">
-      <!-- dashboard-socials -->
-      <section class="socials">
-        <div class="socials-container">
-          <div class="socials__header">
-            <div class="socials__header--content">
-              <h1>Social Media Dashboard</h1>
-              <p>Total Followers: 23,004</p>
-            </div>
-            <div class="socials__header--toggle">
-              <p class="toggle--status">Dark Mode</p>
-              <div>
-                <input type="checkbox" name="theme" id="toggle--btn" />
-              </div>
-            </div>
+      <!-- Insure header -->
+      <header class="header">
+        <div class="header-container">
+          <!-- Header Hamburger -->
+          <div class="header__hamburger hidden">
+            <img
+              src="./images/icon-hamburger.svg"
+              alt=""
+              class="hamburger--icon"
+            />
           </div>
-          <!-- Social Account Card -->
-          <div class="socials__card socials__card--account-1">
-            <div class="socials__card--user">
+
+          <!-- Header Nav -->
+          <nav class="header__nav">
+            <div class="header__nav--logo">
               <img
-                src="./images/icon-facebook.svg"
-                alt="Facebook Logo"
-                title="Facebook Logo"
+                src="./images/logo.svg"
+                alt="Insure Logo"
+                title="Insure Logo"
               />
-              <p>@nathanf</p>
             </div>
-            <div class="social__card--followers">
-              <h2>1987</h2>
-              <p>followers</p>
-            </div>
-            <div class="social__card--stat">
-              <img
-                src="./images/icon-up.svg"
-                alt="Icon pointing up indicating a follower count increase"
-                title="Follower Count Up"
-              />
-              <p class="socials__card--increase">12 Today</p>
+
+            <ul class="header__nav--menu">
+              <li><a href="#" aria-label="How We Work Link">how we work</a></li>
+              <li><a href="#" aria-label="Blog Link">blog</a></li>
+              <li><a href="#" aria-label="Account Link">account</a></li>
+              <li>
+                <a href="#" aria-label="Plans Link">View Plans</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Insure Hero -->
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero__content">
+            <h1 class="hero__content--title">Humanizing your insurance.</h1>
+            <p class="hero__content--para">
+              Get your life insurance coverage easier and faster. We blend our
+              expertise and technology to help you find the plan that’s right
+              for you. Ensure you and your loved ones are protected.
+            </p>
+            <div class="hero__content--plans">
+              <button class="view-plans--btn">View plans</button>
             </div>
           </div>
 
-          <div class="socials__card socials__card--account-2">
-            <div class="socials__card--user">
+          <div class="hero__image">
+            <img
+              src="./images/image-intro-desktop.jpg"
+              alt="Insure Hero Image"
+              aria-labelledby="hero__intro-image"
+              class="hidden"
+            />
+            <img
+              src="./images/image-intro-mobile.jpg"
+              alt=""
+              aria-labelledby="hero__intro-image"
+              title="A photo containing a family of four."
+              class="hidden"
+            />
+            <p class="hero__intro-image hidden">Insure Hero Image</p>
+          </div>
+        </div>
+      </section>
+      <!-- Insure Services -->
+      <section class="company">
+        <div class="company-container">
+          <div class="company__header">
+            <h2 class="company__header--title">We're different</h2>
+          </div>
+
+          <div class="company__motto company__motto--process">
+            <div class="company__motto--header">
               <img
-                src="./images/icon-twitter.svg"
-                alt="Twitter Logo"
-                title="Twitter Logo"
+                src="./images/icon-snappy-process.svg"
+                alt="Snappy Process"
+                title="Snappy Process"
               />
-              <p>@nathanf</p>
             </div>
-            <div class="social__card--followers">
-              <h2>1044</h2>
-              <p>followers</p>
-            </div>
-            <div class="social__card--stat">
-              <img
-                src="./images/icon-up.svg"
-                alt="Icon pointing up indicating a follower count increase"
-                title="Follower Count Up"
-              />
-              <p class="socials__card--increase">99 Today</p>
+            <div class="company__motto--content">
+              <h3>Snappy Process</h3>
+              <p>
+                Our application process can be completed in minutes, not hours.
+                Don't get stuck filling in tedious forms.
+              </p>
             </div>
           </div>
 
-          <div class="socials__card socials__card--account-3">
-            <div class="socials__card--user">
+          <div class="company__motto company__motto--prices">
+            <div class="company__motto--header">
               <img
-                src="./images/icon-instagram.svg"
-                alt="Instagram Logo"
-                title="Instagram Logo"
+                src="./images/icon-affordable-prices.svg"
+                alt="Affordable Prices"
+                title="Affordable Prices"
               />
-              <p>@realnathanf</p>
             </div>
-            <div class="social__card--followers">
-              <h2>11k</h2>
-              <p>followers</p>
-            </div>
-            <div class="social__card--stat">
-              <img
-                src="./images/icon-up.svg"
-                alt="Icon pointing up indicating a follower count increase"
-                title="Follower Count Up"
-              />
-              <p class="socials__card--increase">1099 Today</p>
+            <div class="company__motto--content">
+              <h3>Affordable Prices</h3>
+              <p>
+                We don't want you worrying about high monthly costs. Our prices
+                may be low, but we still offer the best coverage possible.
+              </p>
             </div>
           </div>
 
-          <div class="socials__card socials__card--account-4">
-            <div class="socials__card--user">
+          <div class="company__motto company__motto--people">
+            <div class="company__motto--header">
               <img
-                src="./images/icon-youtube.svg"
-                alt="Youtube Logo"
-                title="Youtube Logo"
+                src="./images/icon-people-first.svg"
+                alt="People First"
+                title="People First"
               />
-              <p>Nathan F.</p>
             </div>
-            <div class="social__card--followers">
-              <h2>8239</h2>
-              <p>subscribers</p>
-            </div>
-            <div class="social__card--stat">
-              <img
-                src="./images/icon-down.svg"
-                alt="Icon pointing down indicating a follower decrease"
-                title="Follower Count Down"
-              />
-              <p class="socials__card--decrease">144 Today</p>
+            <div class="company__motto--content">
+              <h3>People First</h3>
+              <p>
+                Our plans aren't full of conditions and clauses to prevent
+                payouts. We make sure you're covered when you need it.
+              </p>
             </div>
           </div>
 
-          <!-- social overview -->
-          <div class="socials__overview--header socials__header">
-            <h2>Overview - Today</h2>
-          </div>
-
-          <div class="socials__card socials__card--overview">
-            <div class="socials__card--overview__header">
-              <h3>Page Views</h3>
-              <img
-                src="./images/icon-facebook.svg"
-                alt="Facebook Logo"
-                title="Facebook Logo"
-              />
-            </div>
-            <div class="socials__card--overview__content">
-              <h3>87</h3>
-              <div class="socials__card--overview__content--logo">
-                <img
-                  src="./images/icon-up.svg"
-                  alt="Icon pointing up indicating a follower count increase"
-                  title="Follower Count Up"
-                />
-                <p class="socials__card--increase">3&percnt;</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="socials__card socials__card--overview">
-            <div class="socials__card--overview__header">
-              <h3>Likes</h3>
-              <img
-                src="./images/icon-facebook.svg"
-                alt="Facebook Logo"
-                title="Facebook Logo"
-              />
-            </div>
-            <div class="socials__card--overview__content">
-              <h3>52</h3>
-              <div class="socials__card--overview__content--logo">
-                <img
-                  src="./images/icon-down.svg"
-                  alt="Icon pointing down indicating a follower decrease"
-                  title="Follower Count Down"
-                />
-                <p class="socials__card--decrease">2&percnt;</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="socials__card socials__card--overview">
-            <div class="socials__card--overview__header">
-              <h3>Likes</h3>
-              <img
-                src="./images/icon-instagram.svg"
-                alt="Instagram Logo"
-                title="Instagram Logo"
-              />
-            </div>
-            <div class="socials__card--overview__content">
-              <h3>5462</h3>
-              <div class="socials__card--overview__content--logo">
-                <img
-                  src="./images/icon-up.svg"
-                  alt="Icon pointing up indicating a follower count increase"
-                  title="Follower Count Up"
-                />
-                <p class="socials__card--increase">2257&percnt;</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="socials__card socials__card--overview">
-            <div class="socials__card--overview__header">
-              <h3>Profile Views</h3>
-              <img
-                src="./images/icon-instagram.svg"
-                alt="Instagram Logo"
-                title="Instagram Logo"
-              />
-            </div>
-            <div class="socials__card--overview__content">
-              <h3>52k</h3>
-              <div class="socials__card--overview__content--logo">
-                <img
-                  src="./images/icon-up.svg"
-                  alt="Icon pointing up indicating a follower count increase"
-                  title="Follower Count Up"
-                />
-                <p class="socials__card--increase">1375&percnt;</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="socials__card socials__card--overview">
-            <div class="socials__card--overview__header">
-              <h3>Retweets</h3>
-              <img
-                src="./images/icon-twitter.svg"
-                alt="Twitter Logo"
-                title="Twitter Logo"
-              />
-            </div>
-            <div class="socials__card--overview__content">
-              <h3>117</h3>
-              <div class="socials__card--overview__content--logo">
-                <img
-                  src="./images/icon-up.svg"
-                  alt="Icon pointing up indicating a follower count increase"
-                  title="Follower Count Up"
-                />
-                <p class="socials__card--increase">303&percnt;</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="socials__card socials__card--overview">
-            <div class="socials__card--overview__header">
-              <h3>Retweets</h3>
-              <img
-                src="./images/icon-twitter.svg"
-                alt="Twitter Logo"
-                title="Twitter Logo"
-              />
-            </div>
-            <div class="socials__card--overview__content">
-              <h3>507</h3>
-              <div class="socials__card--overview__content--logo">
-                <img
-                  src="./images/icon-up.svg"
-                  alt="Icon pointing up indicating a follower count increase"
-                  title="Follower Count Up"
-                />
-                <p class="socials__card--increase">553&percnt;</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="socials__card socials__card--overview">
-            <div class="socials__card--overview__header">
-              <h3>Likes</h3>
-              <img
-                src="./images/icon-youtube.svg"
-                alt="Youtube Logo"
-                title="Youtube Logo"
-              />
-            </div>
-            <div class="socials__card--overview__content">
-              <h3>107</h3>
-              <div class="socials__card--overview__content--logo">
-                <img
-                  src="./images/icon-down.svg"
-                  alt="Icon pointing down indicating a follower decrease"
-                  title="Follower Count Down"
-                />
-                <p class="socials__card--decrease">19&percnt;</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="socials__card socials__card--overview">
-            <div class="socials__card--overview__header">
-              <h3>Total Views</h3>
-              <img
-                src="./images/icon-youtube.svg"
-                alt="Youtube Logo"
-                title="Youtube Logo"
-              />
-            </div>
-            <div class="socials__card--overview__content">
-              <h3>1407</h3>
-              <div class="socials__card--overview__content--logo">
-                <img
-                  src="./images/icon-down.svg"
-                  alt="Icon pointing down indicating a follower decrease"
-                  title="Follower Count Down"
-                />
-                <p class="socials__card--decrease">12&percnt;</p>
-              </div>
+          <div class="company__work">
+            <h2 class="company__work--title">
+              Find out more about how we work
+            </h2>
+            <div class="company__work--more">
+              <a aria-label="How we work Link">How we work</a>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- Footer -->
+      <!-- Insure footer -->
       <footer class="footer">
-        <div class="footer__attribution">
+        <div class="footer-container">
+          <!-- Footer Header -->
+          <div class="footer__header">
+            <div class="footer__header--logo">
+              <img
+                src="./images/logo.svg"
+                alt="Insure Logo"
+                title="Insure Logo"
+              />
+            </div>
+            <ul class="footer__header--socials">
+              <li>
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  aria-label="Facebook Website Link"
+                >
+                  <img
+                    src="./images/icon-facebook.svg"
+                    alt="Facebook Logo"
+                    title="Facebook Logo"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  aria-label="Twitter Website Link"
+                >
+                  <img
+                    src="./images/icon-twitter.svg"
+                    alt="Twitter Logo"
+                    title="Twitter Logo"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://pinterest.com"
+                  target="_blank"
+                  aria-label="PInterest Website Link"
+                >
+                  <img
+                    src="./images/icon-pinterest.svg"
+                    alt="PInterest Logo"
+                    title="PInterest Logo"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  aria-label="Instagram Website Link"
+                >
+                  <img
+                    src="./images/icon-instagram.svg"
+                    alt="Instagram Logo"
+                    title="Instagram Logo"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <!-- Footer Content -->
+          <div class="footer__content">
+            <div class="footer__content--company footer__content--column">
+              <p>our company</p>
+              <div>
+                <p>how we work</p>
+                <p>why insure?</p>
+                <p>view plans</p>
+                <p>reviews</p>
+              </div>
+            </div>
+            <div class="footer__content--help footer__content--column">
+              <p>help me</p>
+              <div>
+                <p>faq</p>
+                <p>terms of use</p>
+                <p>privacy policy</p>
+                <p>cookies</p>
+              </div>
+            </div>
+            <div class="footer__content--contact footer__content--column">
+              <p>Contact</p>
+              <div>
+                <p>sales</p>
+                <p>support</p>
+                <p>live chat</p>
+              </div>
+            </div>
+            <div class="footer__content--others footer__content--column">
+              <p>reviews</p>
+              <div>
+                <p>careers</p>
+                <p>press</p>
+                <p>licenses</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="attribution">
+        <p class="attribution__content">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
@@ -326,8 +273,8 @@
           <a href="https://github.com/soyed" target="_blank"
             >Samuel Oyediran.</a
           >
-        </div>
-      </footer>
+        </p>
+      </div>
     </main>
   </body>
 </html>
