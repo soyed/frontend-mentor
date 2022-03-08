@@ -168,7 +168,6 @@ a:visited {
   align-items: center;
   width: 100%;
   font-size: calc(2rem + 1.2vw);
-  /* padding: 2rem; */
   align-self: center;
   transition: all 0.5s ease-in-out;
 }
@@ -186,21 +185,14 @@ a:visited {
   font-size: 1.3rem;
   font-weight: 500;
   padding: 1.7rem 0;
-  border-top: solid 0.1rem var(--color-primary-light);
+  border-top: solid 0.05rem var(--color-primary-light);
+
   width: 100%;
   text-align: center;
 }
 
 .pricing__card--details p:last-child {
-  border-bottom: solid 0.1rem var(--color-primary-light);
-}
-
-.pricing__card--details:nth-child(2) p {
-  border-top: solid 0.1rem #ffffff;
-}
-
-.pricing__card--details:nth-child(2) p:last-child {
-  border-bottom: solid 0.1rem #ffffff;
+  border-bottom: solid 0.05rem var(--color-primary-light);
 }
 
 .pricing__card--more {
