@@ -1,44 +1,36 @@
-// => Elements
-const toggleBtn = document.querySelector('.toggle--btn');
-const priceCards = document.querySelectorAll('.pricing__card--header__active');
+const drumCards = document.querySelectorAll(`.drum__card`);
 
-/**
- * adjustPrice is an helper that toggles the cost each card monthly or annually.
- *
- * @param {*} price
- * @param {*} index => the index is the number of 9 to add or remove from a price
- * @param {*} monthly : boolean
- * @returns String
- */
-const adjustPrice = (price, index, monthly) => {
-  const prices = price.split('.');
-  let newPrice;
-  if (monthly) {
-    newPrice =
-      prices[0].substring(0, prices[0].length - index) + '.' + prices[1];
-  } else {
-    newPrice = prices[0] + '9'.repeat(index) + '.' + prices[1];
-  }
-  return newPrice;
+document.addEventListener('keypress', (event) => {
+  const { code } = event;
+
+  const audio = document.querySelector(`.drum__audio[data-key="${code}"]`);
+  const drum = document.querySelector(`.drum__card[data-key="${code}"]`);
+
+  // => edge case
+  if (!audio) return;
+  audio.currentTime = 0;
+  audio.play();
+  drum.classList.add('playing');
+});
+
+drumCards.forEach((drum) => {
+  const keyCode = drum.getAttribute('data-key');
+  const audio = document.querySelector(`.drum__audio[data-key="${keyCode}"]`);
+  audio.currentTime = 0;
+  drum.addEventListener('click', () => {
+    audio.play();
+    drum.classList.add('playing');
+  });
+});
+
+// => Transitionend event
+const smoothTrans = (event) => {
+  // => target is the current element pointed at
+  const { propertyName, target } = event;
+  if (propertyName !== 'transform') return;
+  target.classList.remove('playing');
 };
 
-if (toggleBtn) {
-  toggleBtn.addEventListener('click', () => {
-    // => Toggle the price for all price cards
-    priceCards.forEach((card) => {
-      // => Get the current price
-      const currentPrice = card.textContent.substring(
-        1,
-        card.textContent.length
-      );
-      // => Check the if it is a monthly plan
-      if (currentPrice < 50) {
-        card.textContent = `$${adjustPrice(currentPrice, 1, false)}`;
-      } else {
-        card.textContent = `$${adjustPrice(currentPrice, 1, true)}`;
-      }
-
-      toggleBtn.classList.toggle('toggle');
-    });
-  });
-}
+drumCards.forEach((drum) => {
+  drum.addEventListener('transitionend', smoothTrans);
+});
