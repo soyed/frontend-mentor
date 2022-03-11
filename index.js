@@ -1,36 +1,35 @@
-const drumCards = document.querySelectorAll(`.drum__card`);
+const hourHand = document.querySelector('.clock__hand--hour');
+const minHand = document.querySelector('.clock__hand--min');
+const secHand = document.querySelector('.clock__hand--sec');
 
-document.addEventListener('keypress', (event) => {
-  const { code } = event;
+// helper function to parse
+function convertHour(hour) {
+  if (hour == 0) {
+    return 0;
+  } else if (hour > 12 && hour <= 23) {
+    return hour - 12;
+  } else {
+    return hour;
+  }
+}
 
-  const audio = document.querySelector(`.drum__audio[data-key="${code}"]`);
-  const drum = document.querySelector(`.drum__card[data-key="${code}"]`);
+function setDate() {
+  const date = new Date();
 
-  // => edge case
-  if (!audio) return;
-  audio.currentTime = 0;
-  audio.play();
-  drum.classList.add('playing');
-});
+  const hour = date.getHours();
+  const minute = date.getMinutes();
+  const second = date.getSeconds();
 
-drumCards.forEach((drum) => {
-  const keyCode = drum.getAttribute('data-key');
-  const audio = document.querySelector(`.drum__audio[data-key="${keyCode}"]`);
-  audio.currentTime = 0;
-  drum.addEventListener('click', () => {
-    audio.play();
-    drum.classList.add('playing');
-  });
-});
+  // => Calculate the degree for each seconds
+  const secondDegree = (second / 60) * 360;
+  const minuteDegree = (minute / 60) * 360;
+  const hourDegree = (convertHour(hour) / 12) * 360;
 
-// => Transitionend event
-const smoothTrans = (event) => {
-  // => target is the current element pointed at
-  const { propertyName, target } = event;
-  if (propertyName !== 'transform') return;
-  target.classList.remove('playing');
-};
+  // => set the clock hand angles
+  hourHand.style.transform = `rotate(${90 + hourDegree}deg)`;
+  minHand.style.transform = `rotate(${90 + minuteDegree}deg)`;
+  secHand.style.transform = `rotate(${90 + secondDegree}deg)`;
+}
 
-drumCards.forEach((drum) => {
-  drum.addEventListener('transitionend', smoothTrans);
-});
+// 4. display the current time and update in real time with the clock
+setInterval(setDate, 1000);

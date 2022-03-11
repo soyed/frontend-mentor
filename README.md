@@ -1,20 +1,16 @@
 
-## Problem Statement 
- Matching each button on the page with their respective sound when their button is keydown
 
-Requirements:
-- Animate drum card when active
-- Match each drum card to their respective key when pressed
-- 
+### Solving the problem
 
-
-### Things I Learnt
-- Discovered <kdb></kdb> tags
-- Transitionend event type on the DOM
-
-
-
-## Resources
-  1. https://css-tricks.com/a-complete-guide-to-data-attributes/
-  2. https://keycode.info/
-  3. 
+* Get the current time
+    * extract hour, minute and second from current ime
+* Calculate Angles of rotation per:
+  * seconds
+    * 60 seconds per minute = 60 rotations out of a total degree of 360.
+      * 360/60 => 6 degrees/seconds
+    * minutes => 60mins makes an hour
+      * 360/60 => 6degrees/min  after every 60 seconds mandatory
+    * hours => 60mins = 1 hour
+      * we need 12 rotations on the clock
+      * 360 / 12 => 30 degree per hours => after every 60 minutes
+* Apply the calculated degree on each clock hand
