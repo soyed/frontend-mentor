@@ -1,16 +1,12 @@
 
-
 ### Solving the problem
-
-* Get the current time
-    * extract hour, minute and second from current ime
-* Calculate Angles of rotation per:
-  * seconds
-    * 60 seconds per minute = 60 rotations out of a total degree of 360.
-      * 360/60 => 6 degrees/seconds
-    * minutes => 60mins makes an hour
-      * 360/60 => 6degrees/min  after every 60 seconds mandatory
-    * hours => 60mins = 1 hour
-      * we need 12 rotations on the clock
-      * 360 / 12 => 30 degree per hours => after every 60 minutes
-* Apply the calculated degree on each clock hand
+* Select the input elements
+* Set default values for each input field on the image using css variables
+      * Apply spacing on the image using spacing range input field
+      * Apply blur on the image using the range input field
+      * Apply base color selected on the image using color input field
+* Listen for change each input field
+  * the eventlisteners needed are: ```mouseover```  ```change```
+  * With an helper method:
+    * match the event name to the corresponding input field
+    * apply the style on the image

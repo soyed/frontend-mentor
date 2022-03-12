@@ -4,24 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript30 | 02.Clock</title>
+    <title>Javascript30 | 03.css-variables</title>
 
-    <!-- CSS File -->
     <link rel="stylesheet" href="./style.css" />
-    <!-- Javascript File -->
     <script defer src="./index.js"></script>
   </head>
   <body>
     <main class="container">
-      <section class="clock-section">
-        <div class="clock-container">
-          <div class="clock">
-            <div class="clock-face">
-              <div class="clock__hand clock__hand--hour"></div>
-              <div class="clock__hand clock__hand--min"></div>
-              <div class="clock__hand clock__hand--sec"></div>
+      <section class="main-section">
+        <div class="main-container">
+          <h1 class="main--title">
+            Update CSS Variables with <span> JS</span>
+          </h1>
+
+          <div class="main--options">
+            <div class="main--options__spacing">
+              <label for="range--spacing">Spacing</label>
+              <input
+                type="range"
+                name="range--spacing"
+                class="range--spacing"
+                min="10"
+                max="200"
+                value="30"
+                data-spacing-size="px"
+              />
+            </div>
+            <div class="main--options__blur">
+              <label for="range-blur">Blur</label>
+              <input
+                type="range"
+                name="range--blur"
+                class="range--blur"
+                min="0"
+                max="25"
+                value="10"
+                data-blur-size="px"
+              />
+            </div>
+            <div class="main--options__base">
+              <label for="base--color">Blur</label>
+              <input
+                type="color"
+                name="base--color"
+                class="base--color"
+                value="#f4bbff"
+              />
             </div>
           </div>
+
+          <img
+            src="https://source.unsplash.com/7bwQXzbF6KE/800x500"
+            alt=""
+            class="main--image"
+          />
         </div>
       </section>
       <!-- Footer Section -->

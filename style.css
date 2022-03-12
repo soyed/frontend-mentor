@@ -10,18 +10,18 @@
   font-size: 62.5%;
 
   --color-footer: #ffffff;
+  --range--blur: 10px;
+  --range--spacing: 10px;
+  --base--color: #f4bbff;
 }
 
 body {
   font-size: 1.3rem;
-  background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #193549;
 }
 
-a:visited,
-a:link {
+a:link,
+a:visited {
   text-decoration: none;
   color: red;
 }
@@ -29,56 +29,59 @@ a:link {
 .container {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr [col-end]);
   grid-template-rows: 1fr min-content;
 }
 
-.clock-section,
-.footer {
-  grid-column: col-start 1 / col-end 12;
-}
-
-.clock-section,
-.footer {
+.main-section {
   display: flex;
   justify-content: center;
+  color: #ffffff;
+}
+
+.main-container {
+  margin: 10vh 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.main--options,
+.main-container h1 {
+  margin-bottom: 5rem;
+}
+
+.main-container h1 span {
+  color: var(--base--color);
+}
+
+.main--options {
+  display: flex;
   align-items: center;
 }
 
-.clock-container {
+.main--options__spacing,
+.main--options__blur,
+.main--options__base {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
-.clock {
-  width: 30rem;
-  height: 30rem;
-
-  border-radius: 50%;
-  border: 2rem solid #ffffff;
-  position: relative;
-  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef,
-    inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 2rem;
+.main--options__spacing label,
+.main--options__blur label,
+.main--options__base label {
+  margin-right: 1rem;
 }
 
-.clock-face {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  /* Note:  */
-  transform: translateY(-0.6rem);
+.main--options__spacing,
+.main--options__blur {
+  margin-right: 2rem;
 }
 
-.clock__hand {
-  background-color: #000000;
-  position: absolute;
-  top: 50%;
-  width: 50%;
-  height: 0.6rem;
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  transition: all 0.05s ease-in-out;
+.main-container img {
+  width: 50rem;
+  height: 35rem;
+  padding: var(--range--spacing);
+  background-color: var(--base--color);
+  filter: blur(var(--range--blur));
 }
 
 .footer {
@@ -93,22 +96,45 @@ a:link {
   line-height: 1.2;
 }
 
-/*=========== Media Query => Tablet ==========*/
-.container {
-  grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
-}
+/*================ Media Query => Mobile  ==================*/
+@media screen and (max-width: 600px) {
+  .main-container {
+    margin: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
 
-.clock-section,
-.footer {
-  grid-column: col-start 1 / col-end 8;
-}
+  .main--options {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/*=========== Media Query => mobile ==========*/
-.container {
-  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
-}
+  .main--options__spacing,
+  .main--options__blur,
+  .main--options__base {
+    display: flex;
+    align-items: center;
+  }
 
-.clock-section,
-.footer {
-  grid-column: col-start 1 / col-end 4;
+  .main--options__spacing label,
+  .main--options__blur label,
+  .main--options__base label {
+    margin-right: 2rem;
+  }
+
+  .main--options__spacing,
+  .main--options__blur {
+    margin-right: initial;
+    margin-bottom: 3rem;
+  }
+
+  .main-container img {
+    width: 100%;
+    height: 30rem;
+    padding: var(--range--spacing);
+    background-color: var(--base--color);
+    filter: blur(var(--range--blur));
+  }
 }

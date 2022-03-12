@@ -1,35 +1,29 @@
-const hourHand = document.querySelector('.clock__hand--hour');
-const minHand = document.querySelector('.clock__hand--min');
-const secHand = document.querySelector('.clock__hand--sec');
+'use strict';
+const image = document.querySelector('.main--image');
+const headerSpan = document.querySelector('h1 span');
+const inputFields = document.querySelectorAll('input');
 
-// helper function to parse
-function convertHour(hour) {
-  if (hour == 0) {
-    return 0;
-  } else if (hour > 12 && hour <= 23) {
-    return hour - 12;
-  } else {
-    return hour;
+// Update Image
+const updateImage = (field) => {
+  const name = field.target.name;
+  const value = field.target.value;
+  if (name === 'range--spacing') {
+    const padding = `${value}px`;
+    document.documentElement.style.setProperty(`--${name}`, padding);
   }
-}
 
-function setDate() {
-  const date = new Date();
+  if (name === 'range--blur') {
+    const opacity = `${value}px`;
+    document.documentElement.style.setProperty(`--${name}`, opacity);
+  }
 
-  const hour = date.getHours();
-  const minute = date.getMinutes();
-  const second = date.getSeconds();
+  if (name === 'base--color') {
+    document.documentElement.style.setProperty(`--${name}`, value);
+  }
+};
 
-  // => Calculate the degree for each seconds
-  const secondDegree = (second / 60) * 360;
-  const minuteDegree = (minute / 60) * 360;
-  const hourDegree = (convertHour(hour) / 12) * 360;
-
-  // => set the clock hand angles
-  hourHand.style.transform = `rotate(${90 + hourDegree}deg)`;
-  minHand.style.transform = `rotate(${90 + minuteDegree}deg)`;
-  secHand.style.transform = `rotate(${90 + secondDegree}deg)`;
-}
-
-// 4. display the current time and update in real time with the clock
-setInterval(setDate, 1000);
+// => Add event listener to the input field checking for changes
+inputFields.forEach((field) => {
+  field.addEventListener('change', updateImage);
+  field.addEventListener('mousemove', updateImage);
+});
