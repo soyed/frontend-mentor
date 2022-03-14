@@ -4,62 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Javascript30 | 03.css-variables</title>
-
+    <title>Javascript30 | 05.Flex-Panel</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+      rel="stylesheet"
+      type="text/css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./index.js"></script>
   </head>
   <body>
-    <main class="container">
-      <section class="main-section">
-        <div class="main-container">
-          <h1 class="main--title">
-            Update CSS Variables with <span> JS</span>
-          </h1>
-
-          <div class="main--options">
-            <div class="main--options__spacing">
-              <label for="range--spacing">Spacing</label>
-              <input
-                type="range"
-                name="range--spacing"
-                class="range--spacing"
-                min="10"
-                max="200"
-                value="30"
-                data-spacing-size="px"
-              />
-            </div>
-            <div class="main--options__blur">
-              <label for="range-blur">Blur</label>
-              <input
-                type="range"
-                name="range--blur"
-                class="range--blur"
-                min="0"
-                max="25"
-                value="10"
-                data-blur-size="px"
-              />
-            </div>
-            <div class="main--options__base">
-              <label for="base--color">Blur</label>
-              <input
-                type="color"
-                name="base--color"
-                class="base--color"
-                value="#f4bbff"
-              />
-            </div>
-          </div>
-
-          <img
-            src="https://source.unsplash.com/7bwQXzbF6KE/800x500"
-            alt=""
-            class="main--image"
-          />
+    <main>
+      <div class="panels">
+        <div class="panel panel1">
+          <p>Hey</p>
+          <p>Let's</p>
+          <p>Dance</p>
         </div>
-      </section>
+        <div class="panel panel2">
+          <p>Give</p>
+          <p>Take</p>
+          <p>Receive</p>
+        </div>
+        <div class="panel panel3">
+          <p>Experience</p>
+          <p>It</p>
+          <p>Today</p>
+        </div>
+        <div class="panel panel4">
+          <p>Give</p>
+          <p>All</p>
+          <p>You can</p>
+        </div>
+        <div class="panel panel5">
+          <p>Life</p>
+          <p>In</p>
+          <p>Motion</p>
+        </div>
+      </div>
       <!-- Footer Section -->
       <footer class="footer">
         <p class="footer__content">

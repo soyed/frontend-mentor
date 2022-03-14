@@ -1,23 +1,20 @@
 *,
 *::before,
 *::after {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   font-size: 62.5%;
-
   --color-footer: #ffffff;
-  --range--blur: 10px;
-  --range--spacing: 10px;
-  --base--color: #f4bbff;
 }
 
 body {
-  font-size: 1.3rem;
-  background: #193549;
+  font-size: 2rem;
+  font-weight: 200;
+  background: #ffc600;
+  font-family: 'helvetica neue';
 }
 
 a:link,
@@ -26,62 +23,92 @@ a:visited {
   color: red;
 }
 
-.container {
+.main {
   min-height: 100vh;
   display: grid;
   grid-template-rows: 1fr min-content;
 }
 
-.main-section {
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
-  color: #ffffff;
 }
 
-.main-container {
-  margin: 10vh 0;
+.panel {
+  background: #6b0f9c;
+  box-shadow: inset 0 0 0 0.5rem rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  font-size: 1.5rem;
+  background-size: cover;
+  background-position: center;
+
+  flex: 1;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 
-.main--options,
-.main-container h1 {
-  margin-bottom: 5rem;
+.panel1 {
+  background-image: url(https://source.unsplash.com/gYl-UtwNg_I/1500x1500);
+}
+.panel2 {
+  background-image: url(https://source.unsplash.com/rFKUFzjPYiQ/1500x1500);
+}
+.panel3 {
+  background-image: url(https://images.unsplash.com/photo-1465188162913-8fb5709d6d57?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&w=1500&h=1500&fit=crop&s=967e8a713a4e395260793fc8c802901d);
+}
+.panel4 {
+  background-image: url(https://source.unsplash.com/ITjiVXcwVng/1500x1500);
+}
+.panel5 {
+  background-image: url(https://source.unsplash.com/3MNzGlQM7qs/1500x1500);
 }
 
-.main-container h1 span {
-  color: var(--base--color);
-}
-
-.main--options {
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.main--options__spacing,
-.main--options__blur,
-.main--options__base {
-  display: flex;
-  align-items: center;
+.panel > *:first-child {
+  transform: translateY(-100%);
 }
 
-.main--options__spacing label,
-.main--options__blur label,
-.main--options__base label {
-  margin-right: 1rem;
+.panel > *:last-child {
+  transform: translateY(100%);
 }
 
-.main--options__spacing,
-.main--options__blur {
-  margin-right: 2rem;
+.panel.open-active > *:first-child,
+.panel.open-active > *:last-child {
+  transform: translateY(0);
 }
 
-.main-container img {
-  width: 50rem;
-  height: 35rem;
-  padding: var(--range--spacing);
-  background-color: var(--base--color);
-  filter: blur(var(--range--blur));
+.panel p {
+  text-transform: uppercase;
+  font-family: 'Amatic SC', cursive;
+  text-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.72), 0 0 1.4rem rgba(0, 0, 0, 0.45);
+  font-size: 1em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 3em;
+}
+
+.panel.open {
+  font-size: 40px;
+  flex: 5;
 }
 
 .footer {
@@ -94,47 +121,4 @@ a:visited {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   line-height: 1.2;
-}
-
-/*================ Media Query => Mobile  ==================*/
-@media screen and (max-width: 600px) {
-  .main-container {
-    margin: 10vh 0;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    align-items: center;
-  }
-
-  .main--options {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .main--options__spacing,
-  .main--options__blur,
-  .main--options__base {
-    display: flex;
-    align-items: center;
-  }
-
-  .main--options__spacing label,
-  .main--options__blur label,
-  .main--options__base label {
-    margin-right: 2rem;
-  }
-
-  .main--options__spacing,
-  .main--options__blur {
-    margin-right: initial;
-    margin-bottom: 3rem;
-  }
-
-  .main-container img {
-    width: 100%;
-    height: 30rem;
-    padding: var(--range--spacing);
-    background-color: var(--base--color);
-    filter: blur(var(--range--blur));
-  }
 }
