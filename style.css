@@ -81,8 +81,8 @@ a:visited {
 
 .hero__header--nav__logo {
   width: 100%;
-  justify-self: flex-start;
-  align-self: center;
+  display: flex;
+  align-items: center;
 }
 
 .hero__header--nav ul {
