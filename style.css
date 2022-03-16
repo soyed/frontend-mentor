@@ -62,25 +62,21 @@ a:visited {
 
 .hero__header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-
   height: 10rem;
+  line-height: 10rem;
   width: 80%;
 }
 
 .hero__header--hamburger {
   display: none;
-  position: absolute;
-  right: 0;
-  margin-right: calc(5%);
-  cursor: pointer;
 }
 
 .hero__header--nav {
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: flex-end;
 }
 
 .hero__header--nav__logo {
@@ -99,6 +95,10 @@ a:visited {
   margin-right: 3rem;
   font-size: 1.5rem;
   align-self: center;
+}
+
+.hero__header--nav ul li:last-child {
+  margin-right: initial;
 }
 
 .hero__main {
@@ -501,11 +501,6 @@ a:visited {
     background-image: url('./images/mobile/image-hero.jpg');
   }
 
-  /* .hero__header,
-  .hero__main {
-    width: 90%;
-  } */
-
   .hero__main {
     display: flex;
     align-items: center;
@@ -525,17 +520,58 @@ a:visited {
 
   .hero__header--hamburger {
     display: initial;
+    transition: all 0.5s ease-in;
+    position: absolute;
+    right: 0;
+    margin-right: calc(5%);
+    cursor: pointer;
+  }
+
+  .hero__header {
+    width: 100%;
+  }
+
+  .hero__header--nav {
+    position: fixed;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 10rem;
+    height: 100vh;
+    z-index: 20;
+    display: none;
+    transition: all 0.5s;
   }
 
   .hero__header--nav ul {
-    display: none;
+    height: inherit;
+    width: inherit;
+    flex-direction: column;
+    /* justify-content: center; */
+    padding: 10vh 0;
   }
 
   .hero__header--nav ul li {
+    width: 100%;
     margin-right: initial;
-    margin-bottom: 3rem;
-    align-self: initial;
+    margin-left: 10vw;
     font-size: calc(1.5rem + 1vw);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+
+  .hero__header--nav__logo {
+    margin-left: 5%;
+  }
+
+  .hero__header--nav.open {
+    display: initial;
+  }
+
+  .hero__header.open,
+  .hero__header--nav.open {
+    background-color: #000000;
   }
 
   .company {
