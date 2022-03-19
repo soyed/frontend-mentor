@@ -1,60 +1,64 @@
-const endpoint =
-  'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+const canvas = document.getElementById('draw');
 
-const cities = [];
+// Note: Canvas render a 2-d layout
+const context = canvas.getContext('2d');
 
-const fetchData = async () => {
-  try {
-    const data = await fetch(endpoint);
-    const citiesJSON = await data.json();
-    cities.push(...citiesJSON);
-  } catch (e) {
-    console.log(e);
+// Set canvas width and height to that of the current window
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Set canvas stroke colour
+context.strokeStyle = '#BADA55';
+
+// this is used to style the stroke shape
+context.lineJoin = 'round';
+context.lineCap = 'round';
+
+context.lineWidth = 100;
+
+// Note: to track when drawing is complete
+// it is similar to the 'keyup' eventListener
+
+let isDrawing = false;
+
+// Set the starting coordinates of a drawing on the canvas
+
+let lastX = 0;
+let lastY = 0;
+let hue = 0;
+
+let direction = true;
+
+const draw = (event) => {
+  if (!isDrawing) return;
+  const { offsetX, offsetY } = event;
+  context.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+  context.beginPath();
+  context.moveTo(lastX, lastY);
+  context.lineTo(offsetX, offsetY);
+  context.stroke();
+  // update last X and last y
+  [lastX, lastY] = [offsetX, offsetY];
+
+  hue > 360 ? (hue = 0) : hue++;
+  if (context.lineWidth >= 100 || context.lineWidth <= 1) {
+    direction = !direction;
   }
-};
-fetchData();
 
-const searchField = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
+  direction ? context.lineWidth++ : context.lineWidth--;
 
-const findMatches = (matchWord) => {
-  return cities.filter((region) => {
-    const regex = new RegExp(matchWord, 'gi');
-    return region.city.match(regex) || region.state.match(regex);
-  });
+  console.log(context.lineWidth);
 };
 
-const parsePopulation = (population) => {
-  return population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-};
+// This tracks when drawing on the canvas
+canvas.addEventListener('mousedown', (event) => {
+  isDrawing = true;
+  const { offsetX, offsetY } = event;
+  // set the starting point to the point clicked on the canvas
+  [lastX, lastY] = [offsetX, offsetY];
+});
 
-const displayCityState = (event) => {
-  const value = event.target.value;
-  const foundMatches = findMatches(value);
-
-  const html = foundMatches
-    .map((match) => {
-      const regex = new RegExp(value, 'gi');
-      const city = match.city.replace(
-        regex,
-        `<span class="hl">${value}</span>`
-      );
-      const state = match.state.replace(
-        regex,
-        `<span class="hl">${value}</span>`
-      );
-
-      return `
-        <li>
-            <span class="name">${city}, ${state}</span>
-            <span class="population">${parsePopulation(match.population)}</span>
-        </li>
-    `;
-    })
-    .join('');
-
-  suggestions.innerHTML = html;
-};
-
-searchField.addEventListener('change', displayCityState);
-searchField.addEventListener('keyup', displayCityState);
+canvas.addEventListener('mousemove', draw);
+// These two eventListeners track when drawing has finished
+canvas.addEventListener('mouseup', () => (isDrawing = false));
+canvas.addEventListener('mouseout', () => (isDrawing = false));
