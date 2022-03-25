@@ -2,50 +2,95 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript30 | 10.multiple-check-boxes</title>
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./style.css" />
-    <script src="./index.js" defer></script>
+    <script defer src="./index.js"></script>
   </head>
   <body>
-    <div class="inbox">
-      <div class="item">
-        <input type="checkbox" />
-        <p>This is an inbox layout.</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Check one item</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Hold down your Shift key</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Check a lower item</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Everything in between should also be set to checked</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Try to do it without any libraries</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Just regular JavaScript</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Good Luck!</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Don't forget to tweet your result!</p>
-      </div>
-    </div>
+    <main class="container">
+      <section class="main-section">
+        <div class="main-container">
+          <div class="main__header">
+            <h1>Simple, traffic-based pricing</h1>
+            <p>Sign-up for our 30-day trial. No credit card required.</p>
+          </div>
+          <div class="main__content">
+            <div class="main__content--top">
+              <div>
+                <p>100k Pageviews</p>
+                <p>
+                  <span data-month="month" class="price">&dollar;16.00</span> /
+                  month
+                </p>
+              </div>
+              <div>
+                <div class="price__track">
+                  <div class="price__fill"></div>
+                  <div class="slider-container">
+                    <img src="./images/icon-slider.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p>Monthly Billing</p>
+                </div>
+                <div class="toggle--btn">
+                  <span></span>
+                </div>
+                <div>
+                  <p>Yearly Billing <span>25% discount</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="main__content--bottom">
+              <div>
+                <div>
+                  <img src="./images/icon-check.svg" alt="" />
+                  <p>Unlimited websites</p>
+                </div>
+                <div>
+                  <img src="./images/icon-check.svg" alt="" />
+                  <p>100% data ownership</p>
+                </div>
+                <div>
+                  <img src="./images/icon-check.svg" alt="" />
+                  <p>Email reports</p>
+                </div>
+              </div>
+              <div>
+                <button>Start my trial</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <p class="footer__attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/soyed/" target="_blank">Samuel Oyediran</a
+          >.
+        </p>
+      </footer>
+    </main>
   </body>
 </html>
