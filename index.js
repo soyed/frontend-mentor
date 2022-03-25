@@ -20,6 +20,7 @@ const parsePrice = (price) => {
 const togglePrice = (price = parseDefaultPrice()) => {
   price = Number(price);
   priceText.textContent = `$${parsePrice(price)}.00`;
+  smoothTransition(priceText);
 };
 const updatePrice = (price) => {
   if (priceText.dataset.month === 'year') {
@@ -27,6 +28,7 @@ const updatePrice = (price) => {
   } else {
     priceText.textContent = `$${price}.00`;
   }
+  smoothTransition(priceText);
 };
 
 const slidePrice = (event) => {
@@ -34,6 +36,7 @@ const slidePrice = (event) => {
   const width = Math.round((offsetX / priceTrack.clientWidth) * 100);
   updatePrice(width);
   priceFill.style.width = `calc(${width}% - 1.75rem)`;
+  smoothTransition(priceFill);
 };
 
 const handleTogglePrice = () => {
@@ -44,6 +47,11 @@ const handleTogglePrice = () => {
     priceText.setAttribute('data-month', 'month');
   }
   togglePrice();
+};
+
+const smoothTransition = (element) => {
+  element.classList.add('transition-all');
+  setTimeout(() => element.classList.remove('transition-all'), 500);
 };
 
 /*==========  Event Listeners  ======*/

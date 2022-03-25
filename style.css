@@ -129,6 +129,10 @@ a:visited {
   align-items: center;
 }
 
+.transition-all {
+  transition: all 0.5s ease-in-out;
+}
+
 .main__content--top > div:first-child p:last-child span {
   font-weight: 800;
   color: var(--color-cta-text-bg);
