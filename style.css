@@ -40,9 +40,11 @@ a:visited {
 
   background: url('./images/bg-pattern.svg'), var(--color-main-bg);
   background-repeat: no-repeat;
-  background-size: 100vw, 50vh;
+  background-size: contain;
+}
 
-  /* background-position: 100vw; */
+.transition-all {
+  transition: all 0.5s ease-in-out;
 }
 
 .main-section {
@@ -104,8 +106,9 @@ a:visited {
 .main__content--top > div {
   width: 100%;
   display: flex;
-  flex: 1 0 auto;
+  flex: 2 0 auto;
   align-items: center;
+  flex-wrap: wrap-reverse;
 }
 
 .main__content--top > div:first-child {
@@ -124,66 +127,107 @@ a:visited {
   letter-spacing: 0.2rem;
 }
 
-.main__content--top > div:first-child p:last-child {
+.priceText {
   display: flex;
   align-items: center;
 }
 
-.transition-all {
-  transition: all 0.5s ease-in-out;
-}
-
-.main__content--top > div:first-child p:last-child span {
+.price {
   font-weight: 800;
   color: var(--color-cta-text-bg);
   font-size: 4rem;
   margin-right: 0.5rem;
 }
 
-.main__content--top > div:nth-child(2) {
-  flex: 2 0 auto;
+.main__content--top > div:first-child > div {
+  order: -1;
+  flex: 1 0 100%;
 }
 
-.main__content--top > div:nth-child(2) > div {
+.range--slider {
+  -webkit-appearance: none;
   width: 100%;
-  background-color: var(--color-empty-slider);
+  cursor: pointer;
+}
+/* Slider Track Style for mozilla and chrome */
+.range--slider::-webkit-slider-runnable-track {
+  background: var(--color-empty-slider);
   height: 0.8rem;
-  border-radius: 2rem;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+  border-radius: 1rem;
 }
 
-.price__fill {
-  background-color: var(--color-slider-bar);
-  width: inherit;
-  width: 16%;
-  height: inherit;
-  border-radius: inherit;
+.range--slider::-moz-range-track {
+  background: var(--color-empty-slider);
+  height: 0.8rem;
+  border-radius: 1rem;
 }
-
-.slider-container {
-  width: 3.5rem;
+/* Slider Thumb Style for mozilla and chrome */
+.range--slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
   height: 3.5rem;
+  width: 3.5rem;
   border-radius: 50%;
+  margin-top: -1.5rem;
+  background-image: url('./images/icon-slider.svg');
+  outline: none;
+  border: none;
   background-color: var(--color-slider-bg);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0rem 1rem 2.5rem 0.2rem var(--color-slider-bg);
+}
+.range--slider::-webkit-slider-thumb:hover {
+  background-color: hsla(174, 86%, 45%, 0.952);
+}
+.range--slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  background-color: hsl(172, 92%, 42%);
 }
 
-.slider-container img {
-  object-fit: contain;
-  object-position: center;
+.range--slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-top: -0.4rem;
+  background-image: url('./images/icon-slider.svg');
+  outline: none;
+  border: none;
+  background-color: var(--color-slider-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0rem 1rem 2.5rem 0.2rem var(--color-slider-bg);
+}
+.range--slider::-moz-range-thumb:hover {
+  background-color: hsla(174, 86%, 45%, 0.952);
+}
+
+.range--slider::-moz-range-thumb:active {
+  cursor: grabbing;
+  background-color: hsl(172, 92%, 42%);
 }
 
 .main__content--top > div:last-child {
   width: 100%;
-
   font-size: 1.1rem;
   font-weight: 300;
   color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+}
+.main__content--top > div:last-child > div {
+  flex: 2 0 auto;
+}
+
+.main__content--top > div:last-child div:first-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main__content--top > div:last-child div:nth-child(2) {
+  flex: 1 0 auto;
   display: flex;
   justify-content: center;
 }
@@ -298,7 +342,64 @@ a:visited {
 }
 
 @media screen and (max-width: 600px) {
+  .container {
+    background: url('./images/bg-pattern.svg'), var(--color-main-bg);
+    background-repeat: no-repeat;
+    background-position: top 70vh;
+  }
   .main__content {
     width: 90vw;
+    height: 50rem;
+  }
+
+  .main__content--bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: initial;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .main__content--bottom div:first-child > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .main__content--bottom > div:last-child {
+    max-width: 70%;
+    margin-top: 1rem;
+  }
+
+  .main__content--top > div {
+    flex-wrap: wrap;
+  }
+
+  .main__content--top > div:first-child p:first-child,
+  .priceText,
+  .main__content--top > div:first-child > div {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .main__content--top > div:first-child p:first-child {
+    margin-top: 2rem;
+    order: 1;
+  }
+  .priceText {
+    order: 3;
+  }
+
+  .main__content--top > div:first-child > div {
+    order: 2;
+    margin: 2rem 0;
+  }
+  .main__content--top > div:last-child {
+    width: 100%;
+    font-size: 1rem;
   }
 }
